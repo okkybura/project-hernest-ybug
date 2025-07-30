@@ -1,0 +1,11 @@
+@import url("./global.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply py-20;
+    }
+}

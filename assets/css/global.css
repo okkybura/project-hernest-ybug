@@ -1,0 +1,64 @@
+
+/* ----- Variables ----- */
+
+:root {
+    --vw                                : 1440;
+    --multiplier                        : 100vw;
+
+    --font-size-general                 : 16;
+    --font-size-title                   : 165;
+    --font-size-subtitle                : 14;
+    --font-size-description             : 16;
+    --font-size-date                    : 16;
+    --font-size-caption                 : 16;
+    --font-size-number                  : 47.5;
+    --font-size-link                    : 14;
+    --font-size-button                  : 16;
+    --font-size-icon                    : 12;
+}
+
+@media (max-width: 1080px) {
+    :root {
+        --vw: 900;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --vw: 400;
+    }
+}
+
+body {
+    @apply pr-0;
+
+    @apply font-sans;
+
+    color                               : var(--color-black);
+
+    background                          : var(--color-white);
+}
+
+.wizard {
+    @apply relative;
+}
+
+.btn-solid {
+    @apply inline-block;
+
+    @apply text-center;
+
+    @apply py-3 px-6;
+
+    @apply font-semibold;
+
+    @apply text-white;
+
+    @apply bg-primary;
+
+    @apply rounded-xl;
+
+    width                               : calc(190 / var(--vw) * var(--multiplier));
+
+    padding                             : calc(15 / var(--vw) * var(--multiplier)) calc(25 / var(--vw) * var(--multiplier));
+}

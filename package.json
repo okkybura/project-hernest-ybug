@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.2.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",
+    "serve": "live-server",
+    "watch:css": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind-output.css --watch",
+    "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind-output.css --minify"
+  }
+}
