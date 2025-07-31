@@ -30,6 +30,8 @@ module.exports = {
       },
       colors: {
         primary: '#4444DD',
+        secondary: '#595CFF',
+        black: '#40404A',
       },
       height: {
         screen: "100vh",

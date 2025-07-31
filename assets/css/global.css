@@ -29,14 +29,18 @@
     }
 }
 
+* {
+    @apply transition-all;
+}
+
 body {
     @apply pr-0;
 
     @apply font-sans;
 
-    color                               : var(--color-black);
+    @apply text-black;
 
-    background                          : var(--color-white);
+    @apply bg-white;
 }
 
 .wizard {
@@ -48,17 +52,31 @@ body {
 
     @apply text-center;
 
-    @apply py-3 px-6;
-
     @apply font-semibold;
-
-    @apply text-white;
-
-    @apply bg-primary;
 
     @apply rounded-xl;
 
-    width                               : calc(190 / var(--vw) * var(--multiplier));
+    width                               : calc(135 / var(--vw) * var(--multiplier));
 
-    padding                             : calc(15 / var(--vw) * var(--multiplier)) calc(25 / var(--vw) * var(--multiplier));
+    padding                             : calc(10 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
+}
+
+.btn-solid.primary {
+    @apply text-white;
+
+    @apply bg-primary;
+}
+
+.btn-solid.primary:hover {
+    @apply bg-opacity-[0.90];
+}
+
+.btn-solid.secondary {
+    @apply text-black;
+
+    @apply bg-secondary bg-opacity-[0.15];
+}
+
+.btn-solid.secondary:hover {
+    @apply bg-secondary bg-opacity-[0.25];
 }

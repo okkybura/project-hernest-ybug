@@ -27,11 +27,19 @@
   }
 }
 
+* {
+  transition-property                                : all;
+  transition-timing-function                                : cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration                                : 150ms;
+}
+
 body {
   padding-right                                : 0px;
   font-family                                : ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color                               : var(--color-black);
-  background                          : var(--color-white);
+  --tw-text-opacity                                : 1;
+  color                                : rgb(64 64 74 / var(--tw-text-opacity, 1));
+  --tw-bg-opacity                                : 1;
+  background-color                                : rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .wizard {
@@ -41,18 +49,33 @@ body {
 .btn-solid {
   display                                : inline-block;
   text-align                                : center;
-  padding-top                                : 0.75rem;
-  padding-bottom                                : 0.75rem;
-  padding-left                                : 1.5rem;
-  padding-right                                : 1.5rem;
   font-weight                                : 600;
+  border-radius                                : 0.75rem;
+  width                               : calc(135 / var(--vw) * var(--multiplier));
+  padding                             : calc(10 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
+}
+
+.btn-solid.primary {
   --tw-text-opacity                                : 1;
   color                                : rgb(255 255 255 / var(--tw-text-opacity, 1));
   --tw-bg-opacity                                : 1;
   background-color                                : rgb(68 68 221 / var(--tw-bg-opacity, 1));
-  border-radius                                : 0.75rem;
-  width                               : calc(190 / var(--vw) * var(--multiplier));
-  padding                             : calc(15 / var(--vw) * var(--multiplier)) calc(25 / var(--vw) * var(--multiplier));
+}
+
+.btn-solid.primary:hover {
+  --tw-bg-opacity                                : 0.90;
+}
+
+.btn-solid.secondary {
+  --tw-text-opacity                                : 1;
+  color                                : rgb(64 64 74 / var(--tw-text-opacity, 1));
+  background-color                                : rgb(89 92 255 / var(--tw-bg-opacity, 1));
+  --tw-bg-opacity                                : 0.15;
+}
+
+.btn-solid.secondary:hover {
+  background-color                                : rgb(89 92 255 / var(--tw-bg-opacity, 1));
+  --tw-bg-opacity                                : 0.25;
 }
 
 *, ::before, ::after {
@@ -666,6 +689,10 @@ video {
 
 .mb-5 {
   margin-bottom                                : 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom                                : 2rem;
 }
 
 .mr-3 {
