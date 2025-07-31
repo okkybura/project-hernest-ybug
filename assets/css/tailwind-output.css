@@ -3,7 +3,7 @@
 /* ----- Variables ----- */
 
 :root {
-  --vw: 1500;
+  --vw: 1600;
   --multiplier: 100vw;
   --font-size-general: 16;
   --font-size-title: 165;
@@ -15,6 +15,11 @@
   --font-size-link: 14;
   --font-size-button: 16;
   --font-size-icon: 12;
+  --color-primary: #4444DD;
+  --color-secondary: #595CFF;
+  --color-tertiary: #FF7B9C;
+  --color-quarter: #E0E1FF;
+  --color-quinary: #F5F6FF;
   --cubic-bezier-1: cubic-bezier(0.625, 0.05, 0, 1);
 }
 
@@ -70,15 +75,19 @@ svg {
   position: relative;
 }
 
-/* Font */
-
-.text-title-primary{
-  font-weight: 700;
+.bg-custom-gradient-primary {
+  background: linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 90%);
 }
+
+/* Text */
 
 .text-title-primary span{
   --tw-text-opacity: 1;
   color: rgb(89 92 255 / var(--tw-text-opacity, 1));
+}
+
+.text-number-primary{
+  font-weight: 700;
 }
 
 /* Button */
@@ -88,14 +97,244 @@ svg {
   display: inline-block;
   text-align: center;
   font-weight: 600;
-  font-size: calc(19 / 1500 * 100vw);
+  font-size: calc(19 / 1600 * 100vw);
   line-height: 1.25;
 }
 
+.btn-default > span.wrapper > span{
+  position: relative;
+}
+
+.btn-default > span.wrapper > span.text{
+  display: block;
+  overflow: hidden;
+}
+
+.btn-default > span.wrapper > span.text > span{
+  display: block;
+}
+
+.btn-default > span.wrapper > span.text > span:nth-child(2){
+  position: absolute;
+  width: 100%;
+  top: 100%;
+}
+
+.btn-default > span.wrapper > span.text > span > span{
+  display: inline-block;
+  white-space: pre;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(2) {
+  transition-delay: 0.005s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(3) {
+  transition-delay: 0.01s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(4) {
+  transition-delay: 0.015s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(5) {
+  transition-delay: 0.02s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(6) {
+  transition-delay: 0.025s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(7) {
+  transition-delay: 0.03s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(8) {
+  transition-delay: 0.035s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(9) {
+  transition-delay: 0.04s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(10) {
+  transition-delay: 0.045s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(11) {
+  transition-delay: 0.05s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(12) {
+  transition-delay: 0.055s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(13) {
+  transition-delay: 0.06s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(14) {
+  transition-delay: 0.065s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(15) {
+  transition-delay: 0.07s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(16) {
+  transition-delay: 0.075s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(17) {
+  transition-delay: 0.08s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(18) {
+  transition-delay: 0.085s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(19) {
+  transition-delay: 0.09s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(20) {
+  transition-delay: 0.095s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(21) {
+  transition-delay: 0.1s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(22) {
+  transition-delay: 0.105s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(23) {
+  transition-delay: 0.11s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(24) {
+  transition-delay: 0.115s;
+}
+
+.btn-default > span.wrapper > span.text > span > span:nth-child(25) {
+  transition-delay: 0.12s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span:nth-child(1) > span {
+  transform: translateY(-100%);
+}
+
+.btn-default:hover > span.wrapper > span.text > span:nth-child(2) > span {
+  transform: translateY(-100%);
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(2) {
+  transition-delay: 0.0125s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(3) {
+  transition-delay: 0.025s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(4) {
+  transition-delay: 0.0375s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(5) {
+  transition-delay: 0.05s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(6) {
+  transition-delay: 0.0625s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(7) {
+  transition-delay: 0.075s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(8) {
+  transition-delay: 0.0875s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(9) {
+  transition-delay: 0.1s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(10) {
+  transition-delay: 0.1125s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(11) {
+  transition-delay: 0.125s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(12) {
+  transition-delay: 0.1375s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(13) {
+  transition-delay: 0.15s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(14) {
+  transition-delay: 0.1625s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(15) {
+  transition-delay: 0.175s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(16) {
+  transition-delay: 0.1875s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(17) {
+  transition-delay: 0.2s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(18) {
+  transition-delay: 0.2125s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(19) {
+  transition-delay: 0.225s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(20) {
+  transition-delay: 0.2375s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(21) {
+  transition-delay: 0.25s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(22) {
+  transition-delay: 0.2625s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(23) {
+  transition-delay: 0.275s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(24) {
+  transition-delay: 0.2875s;
+}
+
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(25) {
+  transition-delay: 0.3s;
+}
+
 .btn-solid{
-  --tw-bg-opacity: 1;
-  background-color: rgb(68 68 221 / var(--tw-bg-opacity, 1));
-  border-radius: calc(10 / 1500 * 100vw);
+  border-radius: calc(10 / 1600 * 100vw);
   width: calc(225 / var(--vw) * var(--multiplier));
   padding: calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
 }
@@ -117,146 +356,31 @@ svg {
 .btn-solid.primary{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 68 221 / var(--tw-bg-opacity, 1));
 }
 
 .btn-solid.primary:hover{
   --tw-bg-opacity: 0.90;
 }
 
-.btn-solid.secondary{
+.btn-solid.quarter{
   --tw-text-opacity: 1;
   color: rgb(64 64 74 / var(--tw-text-opacity, 1));
-  background-color: rgb(89 92 255 / var(--tw-bg-opacity, 1));
-  --tw-bg-opacity: 0.15;
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 225 255 / var(--tw-bg-opacity, 1));
 }
 
-.btn-solid.secondary:hover{
-  background-color: rgb(89 92 255 / var(--tw-bg-opacity, 1));
-  --tw-bg-opacity: 0.25;
+.btn-solid.quarter:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 225 255 / var(--tw-bg-opacity, 1));
 }
 
-.btn-solid > span.wrapper > span{
-  position: relative;
-}
-
-.btn-solid > span.wrapper > span.text{
-  display: block;
-  overflow: hidden;
-}
-
-.btn-solid > span.wrapper > span.text > span{
-  display: block;
-}
-
-.btn-solid > span.wrapper > span.text > span:nth-child(2){
-  position: absolute;
-  width: 100%;
-  top: 100%;
-}
-
-.btn-solid > span.wrapper > span.text > span > span{
-  display: inline-block;
-  white-space: pre;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(1) {
-  transition-delay: 0s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(2) {
-  transition-delay: 0.005s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(3) {
-  transition-delay: 0.01s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(4) {
-  transition-delay: 0.015s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(5) {
-  transition-delay: 0.02s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(6) {
-  transition-delay: 0.025s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(7) {
-  transition-delay: 0.03s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(8) {
-  transition-delay: 0.035s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(9) {
-  transition-delay: 0.04s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(10) {
-  transition-delay: 0.045s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(11) {
-  transition-delay: 0.05s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(12) {
-  transition-delay: 0.055s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(13) {
-  transition-delay: 0.06s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(14) {
-  transition-delay: 0.065s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(15) {
-  transition-delay: 0.07s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(16) {
-  transition-delay: 0.075s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(17) {
-  transition-delay: 0.08s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(18) {
-  transition-delay: 0.085s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(19) {
-  transition-delay: 0.09s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(20) {
-  transition-delay: 0.095s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(21) {
-  transition-delay: 0.1s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(22) {
-  transition-delay: 0.105s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(23) {
-  transition-delay: 0.11s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(24) {
-  transition-delay: 0.115s;
-}
-
-.btn-solid > span.wrapper > span.text > span > span:nth-child(25) {
-  transition-delay: 0.12s;
+.btn-solid.light{
+  --tw-text-opacity: 1;
+  color: rgb(64 64 74 / var(--tw-text-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .btn-solid:hover {
@@ -264,116 +388,48 @@ svg {
 }
 
 .btn-solid:hover:before{
-  opacity: 0.5;
+  opacity: 0.4;
   bottom: -10px;
 }
 
-.btn-solid:hover > span.wrapper > span.text > span:nth-child(1) > span {
-  transform: translateY(-100%);
+.btn-transparent{
+  font-size: calc(16 / 1600 * 100vw);
+  line-height: 1.25;
+  --tw-text-opacity: 1;
+  color: rgb(68 68 221 / var(--tw-text-opacity, 1));
 }
 
-.btn-solid:hover > span.wrapper > span.text > span:nth-child(2) > span {
-  transform: translateY(-100%);
+.btn-transparent.primary{
+  --tw-text-opacity: 1;
+  color: rgb(68 68 221 / var(--tw-text-opacity, 1));
 }
 
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(1) {
-  transition-delay: 0s;
+.btn-transparent > span.wrapper{
+  display: flex;
+  align-items: center;
 }
 
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(2) {
-  transition-delay: 0.0125s;
+.btn-transparent > span.wrapper > span.icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(15 / 1600 * 100vw);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  border-radius: 9999px;
+  width: calc(45 / var(--vw) * var(--multiplier));
+  height: calc(45 / var(--vw) * var(--multiplier));
 }
 
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(3) {
-  transition-delay: 0.025s;
+.btn-transparent > span.wrapper > span.icon svg {
+  width: calc(25 / var(--vw) * var(--multiplier));
+  height: calc(25 / var(--vw) * var(--multiplier));
 }
 
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(4) {
-  transition-delay: 0.0375s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(5) {
-  transition-delay: 0.05s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(6) {
-  transition-delay: 0.0625s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(7) {
-  transition-delay: 0.075s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(8) {
-  transition-delay: 0.0875s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(9) {
-  transition-delay: 0.1s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(10) {
-  transition-delay: 0.1125s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(11) {
-  transition-delay: 0.125s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(12) {
-  transition-delay: 0.1375s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(13) {
-  transition-delay: 0.15s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(14) {
-  transition-delay: 0.1625s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(15) {
-  transition-delay: 0.175s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(16) {
-  transition-delay: 0.1875s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(17) {
-  transition-delay: 0.2s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(18) {
-  transition-delay: 0.2125s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(19) {
-  transition-delay: 0.225s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(20) {
-  transition-delay: 0.2375s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(21) {
-  transition-delay: 0.25s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(22) {
-  transition-delay: 0.2625s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(23) {
-  transition-delay: 0.275s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(24) {
-  transition-delay: 0.2875s;
-}
-
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(25) {
-  transition-delay: 0.3s;
+.btn-transparent:hover > span.wrapper > span.icon{
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .marquee-fade-horizontal {
@@ -998,12 +1054,24 @@ video {
   left: calc((-200 * var(--multiplier)) / var(--vw));
 }
 
+.right-\[calc\(\(-30\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  right: calc((-30 * var(--multiplier)) / var(--vw));
+}
+
 .top-\[-50\%\]{
   top: -50%;
 }
 
+.top-\[41\.5\%\]{
+  top: 41.5%;
+}
+
 .z-10{
   z-index: 10;
+}
+
+.col-span-3{
+  grid-column: span 3 / span 3;
 }
 
 .col-span-5{
@@ -1015,7 +1083,7 @@ video {
 }
 
 .m-custom-3{
-  margin: calc(15 / 1500 * 100vw);
+  margin: calc(15 / 1600 * 100vw);
 }
 
 .mx-auto{
@@ -1023,16 +1091,37 @@ video {
   margin-right: auto;
 }
 
+.my-custom-10{
+  margin-top: calc(100 / 1600 * 100vw);
+  margin-bottom: calc(100 / 1600 * 100vw);
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
 
+.mb-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  margin-bottom: calc((60 * var(--multiplier)) / var(--vw));
+}
+
+.mb-custom-10{
+  margin-bottom: calc(100 / 1600 * 100vw);
+}
+
+.mb-custom-2{
+  margin-bottom: calc(10 / 1600 * 100vw);
+}
+
+.mb-custom-3{
+  margin-bottom: calc(15 / 1600 * 100vw);
+}
+
 .mb-custom-4{
-  margin-bottom: calc(20 / 1500 * 100vw);
+  margin-bottom: calc(25 / 1600 * 100vw);
 }
 
 .mb-custom-5{
-  margin-bottom: calc(35 / 1500 * 100vw);
+  margin-bottom: calc(30 / 1600 * 100vw);
 }
 
 .ml-1{
@@ -1044,7 +1133,11 @@ video {
 }
 
 .mr-custom-3{
-  margin-right: calc(15 / 1500 * 100vw);
+  margin-right: calc(15 / 1600 * 100vw);
+}
+
+.mt-auto{
+  margin-top: auto;
 }
 
 .block{
@@ -1071,12 +1164,28 @@ video {
   height: calc((125 * var(--multiplier)) / var(--vw));
 }
 
+.h-\[calc\(\(30\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  height: calc((30 * var(--multiplier)) / var(--vw));
+}
+
+.h-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  height: calc((37.5 * var(--multiplier)) / var(--vw));
+}
+
+.h-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  height: calc((60 * var(--multiplier)) / var(--vw));
+}
+
 .h-\[calc\(\(850\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   height: calc((850 * var(--multiplier)) / var(--vw));
 }
 
 .h-screen{
   height: 100vh;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .w-\[96\.5\%\]{
@@ -1091,6 +1200,18 @@ video {
   width: calc((200 * var(--multiplier)) / var(--vw));
 }
 
+.w-\[calc\(\(30\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((30 * var(--multiplier)) / var(--vw));
+}
+
+.w-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((37.5 * var(--multiplier)) / var(--vw));
+}
+
+.w-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((60 * var(--multiplier)) / var(--vw));
+}
+
 .w-\[calc\(\(850\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   width: calc((850 * var(--multiplier)) / var(--vw));
 }
@@ -1103,6 +1224,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[50\%\]{
+  max-width: 50%;
+}
+
 .translate-x-\[-50\%\]{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1110,6 +1235,10 @@ video {
 
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 .items-center{
@@ -1124,51 +1253,149 @@ video {
   gap: 1.5rem;
 }
 
+.gap-custom-gap-5{
+  gap: calc(30 / 1600 * 100vw);
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
 
-.rounded-custom-medium{
-  border-radius: calc(10 / 1500 * 100vw);
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.rounded-custom-lg{
+  border-radius: calc(20 / 1600 * 100vw);
+}
+
+.rounded-custom-md{
+  border-radius: calc(10 / 1600 * 100vw);
 }
 
 .rounded-full{
   border-radius: 9999px;
 }
 
-.bg-secondary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(89 92 255 / var(--tw-bg-opacity, 1));
+.border{
+  border-width: 1px;
 }
 
-.bg-opacity-5{
-  --tw-bg-opacity: 0.05;
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(64 64 74 / var(--tw-border-opacity, 1));
+}
+
+.border-opacity-25{
+  --tw-border-opacity: 0.25;
+}
+
+.border-opacity-15{
+  --tw-border-opacity: 0.15;
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 64 74 / var(--tw-bg-opacity, 1));
+}
+
+.bg-color-custom-quinary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 246 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-color-custom-secondary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(89 92 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-\[0\.15\]{
   --tw-bg-opacity: 0.15;
 }
 
+.p-custom-15{
+  padding: calc(150 / 1600 * 100vw);
+}
+
 .p-custom-5{
-  padding: calc(35 / 1500 * 100vw);
+  padding: calc(30 / 1600 * 100vw);
+}
+
+.p-custom-9{
+  padding: calc(50 / 1600 * 100vw);
+}
+
+.p-custom-7{
+  padding: calc(40 / 1600 * 100vw);
+}
+
+.px-custom-4{
+  padding-left: calc(25 / 1600 * 100vw);
+  padding-right: calc(25 / 1600 * 100vw);
+}
+
+.px-custom-5{
+  padding-left: calc(30 / 1600 * 100vw);
+  padding-right: calc(30 / 1600 * 100vw);
+}
+
+.px-custom-6{
+  padding-left: calc(35 / 1600 * 100vw);
+  padding-right: calc(35 / 1600 * 100vw);
+}
+
+.py-custom-10{
+  padding-top: calc(100 / 1600 * 100vw);
+  padding-bottom: calc(100 / 1600 * 100vw);
+}
+
+.py-custom-5{
+  padding-top: calc(30 / 1600 * 100vw);
+  padding-bottom: calc(30 / 1600 * 100vw);
 }
 
 .text-center{
   text-align: center;
 }
 
-.text-subtitle-primary{
-  font-size: calc(21 / 1500 * 100vw);
+.text-right{
+  text-align: right;
+}
+
+.text-size-custom-description-primary{
+  font-size: calc(16 / 1600 * 100vw);
+  line-height: 1.75;
+}
+
+.text-size-custom-description-secondary{
+  font-size: calc(17 / 1600 * 100vw);
+  line-height: 1.75;
+}
+
+.text-size-custom-number-primary{
+  font-size: calc(55 / 1600 * 100vw);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.text-size-custom-subtitle-primary{
+  font-size: calc(21 / 1600 * 100vw);
   line-height: 1.65;
 }
 
-.text-subtitle-secondary{
-  font-size: calc(28 / 1500 * 100vw);
+.text-size-custom-subtitle-secondary{
+  font-size: calc(28 / 1600 * 100vw);
   line-height: 1.65;
 }
 
-.text-title-primary{
-  font-size: calc(55 / 1500 * 100vw);
+.text-size-custom-title-primary{
+  font-size: calc(55 / 1600 * 100vw);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.text-size-custom-title-secondary{
+  font-size: calc(36 / 1600 * 100vw);
   line-height: 1.1;
   letter-spacing: -0.05em;
 }
@@ -1179,6 +1406,29 @@ video {
 
 .leading-none{
   line-height: 1;
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(64 64 74 / var(--tw-text-opacity, 1));
+}
+
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(68 68 221 / var(--tw-text-opacity, 1));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-opacity-65{
+  --tw-text-opacity: 0.65;
+}
+
+.text-opacity-75{
+  --tw-text-opacity: 0.75;
 }
 
 .blur-\[calc\(\(150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{

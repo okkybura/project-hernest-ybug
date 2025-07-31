@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* ----- Variables ----- */
 :root {
-  --vw: 1500;
+  --vw: 1600;
   --multiplier: 100vw;
   --font-size-general: 16;
   --font-size-title: 165;
@@ -13,6 +13,11 @@
   --font-size-link: 14;
   --font-size-button: 16;
   --font-size-icon: 12;
+  --color-primary: #4444DD;
+  --color-secondary: #595CFF;
+  --color-tertiary: #FF7B9C;
+  --color-quarter: #E0E1FF;
+  --color-quinary: #F5F6FF;
   --cubic-bezier-1: cubic-bezier(0.625, 0.05, 0, 1);
 }
 
@@ -45,7 +50,7 @@ a:before, a:after {
 }
 
 a:not(.btn):hover {
-  @apply text-primary;
+  @apply text-color-custom-primary;
 }
 
 .container {
@@ -61,13 +66,17 @@ svg {
   @apply relative;
 }
 
-/* Font */
-.text-title-primary {
-  @apply font-bold;
+.bg-custom-gradient-primary {
+  background: linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 90%);
 }
 
+/* Text */
 .text-title-primary span {
-  @apply text-secondary;
+  @apply text-color-custom-secondary;
+}
+
+.text-number-primary {
+  @apply font-bold;
 }
 
 /* Button */
@@ -76,12 +85,186 @@ svg {
   @apply inline-block;
   @apply text-center;
   @apply font-semibold;
-  @apply text-button-primary;
+  @apply text-size-custom-button-primary;
+}
+.btn-default > span.wrapper > span {
+  @apply relative;
+}
+.btn-default > span.wrapper > span.text {
+  @apply block;
+  @apply overflow-hidden;
+}
+.btn-default > span.wrapper > span.text > span {
+  @apply block;
+}
+.btn-default > span.wrapper > span.text > span:nth-child(2) {
+  @apply absolute;
+  @apply w-full;
+  top: 100%;
+}
+.btn-default > span.wrapper > span.text > span > span {
+  @apply inline-block;
+  white-space: pre;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(2) {
+  transition-delay: 0.005s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(3) {
+  transition-delay: 0.01s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(4) {
+  transition-delay: 0.015s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(5) {
+  transition-delay: 0.02s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(6) {
+  transition-delay: 0.025s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(7) {
+  transition-delay: 0.03s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(8) {
+  transition-delay: 0.035s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(9) {
+  transition-delay: 0.04s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(10) {
+  transition-delay: 0.045s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(11) {
+  transition-delay: 0.05s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(12) {
+  transition-delay: 0.055s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(13) {
+  transition-delay: 0.06s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(14) {
+  transition-delay: 0.065s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(15) {
+  transition-delay: 0.07s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(16) {
+  transition-delay: 0.075s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(17) {
+  transition-delay: 0.08s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(18) {
+  transition-delay: 0.085s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(19) {
+  transition-delay: 0.09s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(20) {
+  transition-delay: 0.095s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(21) {
+  transition-delay: 0.1s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(22) {
+  transition-delay: 0.105s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(23) {
+  transition-delay: 0.11s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(24) {
+  transition-delay: 0.115s;
+}
+.btn-default > span.wrapper > span.text > span > span:nth-child(25) {
+  transition-delay: 0.12s;
+}
+.btn-default:hover > span.wrapper > span.text > span:nth-child(1) > span {
+  transform: translateY(-100%);
+}
+.btn-default:hover > span.wrapper > span.text > span:nth-child(2) > span {
+  transform: translateY(-100%);
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(2) {
+  transition-delay: 0.0125s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(3) {
+  transition-delay: 0.025s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(4) {
+  transition-delay: 0.0375s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(5) {
+  transition-delay: 0.05s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(6) {
+  transition-delay: 0.0625s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(7) {
+  transition-delay: 0.075s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(8) {
+  transition-delay: 0.0875s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(9) {
+  transition-delay: 0.1s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(10) {
+  transition-delay: 0.1125s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(11) {
+  transition-delay: 0.125s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(12) {
+  transition-delay: 0.1375s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(13) {
+  transition-delay: 0.15s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(14) {
+  transition-delay: 0.1625s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(15) {
+  transition-delay: 0.175s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(16) {
+  transition-delay: 0.1875s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(17) {
+  transition-delay: 0.2s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(18) {
+  transition-delay: 0.2125s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(19) {
+  transition-delay: 0.225s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(20) {
+  transition-delay: 0.2375s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(21) {
+  transition-delay: 0.25s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(22) {
+  transition-delay: 0.2625s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(23) {
+  transition-delay: 0.275s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(24) {
+  transition-delay: 0.2875s;
+}
+.btn-default:hover > span.wrapper > span.text > span > span:nth-child(25) {
+  transition-delay: 0.3s;
 }
 
 .btn-solid {
-  @apply bg-primary;
-  @apply rounded-custom-medium;
+  @apply rounded-custom-md;
   width: calc(225 / var(--vw) * var(--multiplier));
   padding: calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
 }
@@ -99,199 +282,58 @@ svg {
   filter: blur(15px);
 }
 .btn-solid.primary {
-  @apply text-white;
+  @apply text-color-custom-white;
+  @apply bg-color-custom-primary;
 }
 .btn-solid.primary:hover {
   @apply bg-opacity-[0.90];
 }
-.btn-solid.secondary {
-  @apply text-black;
-  @apply bg-secondary bg-opacity-[0.15];
+.btn-solid.quarter {
+  @apply text-color-custom-black;
+  @apply bg-color-custom-quarter;
 }
-.btn-solid.secondary:hover {
-  @apply bg-secondary bg-opacity-[0.25];
+.btn-solid.quarter:hover {
+  @apply bg-color-custom-quarter;
 }
-.btn-solid > span.wrapper > span {
-  @apply relative;
-}
-.btn-solid > span.wrapper > span.text {
-  @apply block;
-  @apply overflow-hidden;
-}
-.btn-solid > span.wrapper > span.text > span {
-  @apply block;
-}
-.btn-solid > span.wrapper > span.text > span:nth-child(2) {
-  @apply absolute;
-  @apply w-full;
-  top: 100%;
-}
-.btn-solid > span.wrapper > span.text > span > span {
-  @apply inline-block;
-  white-space: pre;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(1) {
-  transition-delay: 0s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(2) {
-  transition-delay: 0.005s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(3) {
-  transition-delay: 0.01s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(4) {
-  transition-delay: 0.015s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(5) {
-  transition-delay: 0.02s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(6) {
-  transition-delay: 0.025s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(7) {
-  transition-delay: 0.03s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(8) {
-  transition-delay: 0.035s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(9) {
-  transition-delay: 0.04s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(10) {
-  transition-delay: 0.045s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(11) {
-  transition-delay: 0.05s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(12) {
-  transition-delay: 0.055s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(13) {
-  transition-delay: 0.06s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(14) {
-  transition-delay: 0.065s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(15) {
-  transition-delay: 0.07s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(16) {
-  transition-delay: 0.075s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(17) {
-  transition-delay: 0.08s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(18) {
-  transition-delay: 0.085s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(19) {
-  transition-delay: 0.09s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(20) {
-  transition-delay: 0.095s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(21) {
-  transition-delay: 0.1s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(22) {
-  transition-delay: 0.105s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(23) {
-  transition-delay: 0.11s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(24) {
-  transition-delay: 0.115s;
-}
-.btn-solid > span.wrapper > span.text > span > span:nth-child(25) {
-  transition-delay: 0.12s;
+.btn-solid.light {
+  @apply text-color-custom-black;
+  @apply bg-color-custom-white;
 }
 .btn-solid:hover {
   transform: translateY(-5px);
 }
 .btn-solid:hover:before {
-  @apply opacity-50;
+  @apply opacity-40;
   bottom: -10px;
 }
-.btn-solid:hover > span.wrapper > span.text > span:nth-child(1) > span {
-  transform: translateY(-100%);
+
+.btn-transparent {
+  @apply text-size-custom-button-secondary;
+  @apply text-primary;
 }
-.btn-solid:hover > span.wrapper > span.text > span:nth-child(2) > span {
-  transform: translateY(-100%);
+.btn-transparent.primary {
+  @apply text-primary;
 }
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(1) {
-  transition-delay: 0s;
+.btn-transparent > span.wrapper {
+  @apply flex;
+  @apply items-center;
 }
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(2) {
-  transition-delay: 0.0125s;
+.btn-transparent > span.wrapper > span.icon {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply ml-custom-3;
+  @apply bg-white;
+  @apply rounded-full;
+  width: calc(45 / var(--vw) * var(--multiplier));
+  height: calc(45 / var(--vw) * var(--multiplier));
 }
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(3) {
-  transition-delay: 0.025s;
+.btn-transparent > span.wrapper > span.icon svg {
+  width: calc(25 / var(--vw) * var(--multiplier));
+  height: calc(25 / var(--vw) * var(--multiplier));
 }
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(4) {
-  transition-delay: 0.0375s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(5) {
-  transition-delay: 0.05s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(6) {
-  transition-delay: 0.0625s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(7) {
-  transition-delay: 0.075s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(8) {
-  transition-delay: 0.0875s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(9) {
-  transition-delay: 0.1s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(10) {
-  transition-delay: 0.1125s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(11) {
-  transition-delay: 0.125s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(12) {
-  transition-delay: 0.1375s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(13) {
-  transition-delay: 0.15s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(14) {
-  transition-delay: 0.1625s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(15) {
-  transition-delay: 0.175s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(16) {
-  transition-delay: 0.1875s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(17) {
-  transition-delay: 0.2s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(18) {
-  transition-delay: 0.2125s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(19) {
-  transition-delay: 0.225s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(20) {
-  transition-delay: 0.2375s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(21) {
-  transition-delay: 0.25s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(22) {
-  transition-delay: 0.2625s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(23) {
-  transition-delay: 0.275s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(24) {
-  transition-delay: 0.2875s;
-}
-.btn-solid:hover > span.wrapper > span.text > span > span:nth-child(25) {
-  transition-delay: 0.3s;
+.btn-transparent:hover > span.wrapper > span.icon {
+  @apply scale-90;
 }
 
 .marquee-fade-horizontal {

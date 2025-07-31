@@ -4,7 +4,7 @@
 /* ----- Variables ----- */
 
 :root {
-    --vw                                : 1500;
+    --vw                                : 1600;
     --multiplier                        : 100vw;
 
     --font-size-general                 : 16;
@@ -17,6 +17,14 @@
     --font-size-link                    : 14;
     --font-size-button                  : 16;
     --font-size-icon                    : 12;
+
+    // Color
+
+    --color-primary                     : #4444DD;
+    --color-secondary                   : #595CFF;
+    --color-tertiary                    : #FF7B9C;
+    --color-quarter                     : #E0E1FF;
+    --color-quinary                     : #F5F6FF;
 
     // Transition
 
@@ -60,7 +68,7 @@ a {
 }
 
 a:not(.btn):hover {
-    @apply text-primary;
+    @apply text-color-custom-primary;
 }
 
 .container {
@@ -76,14 +84,22 @@ svg {
     @apply relative;
 }
 
-/* Font */
+// Background
 
-.text-title-primary {
-    @apply font-bold;
+.bg-custom-gradient-primary {
+    background                          : linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 90%);
 }
 
-.text-title-primary span {
-    @apply text-secondary;
+/* Text */
+
+.text-title-primary {
+    span {
+        @apply text-color-custom-secondary;
+    }
+}
+
+.text-number-primary {
+    @apply font-bold;
 }
 
 /* Button */
@@ -96,58 +112,7 @@ svg {
     @apply text-center;
 
     @apply font-semibold;
-    @apply text-button-primary;
-}
-
-.btn-solid {
-    @apply bg-primary;
-    
-    @apply rounded-custom-medium;
-
-    width                               : calc(225 / var(--vw) * var(--multiplier));
-
-    padding                             : calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
-
-    &:before {
-        @apply absolute;
-
-        @apply h-full;
-
-        @apply opacity-0;
-
-        @apply rounded-full;
-
-        content                         : ''; 
-
-        z-index                         : -1;
-
-        width                           : 90%;
-
-        bottom                          : 0;
-        left                            : 5%;
-
-        background                      : inherit;
-
-        filter                          : blur(15px);
-    }
-
-    &.primary {
-        @apply text-white;
-
-        &:hover {
-            @apply bg-opacity-[0.90];
-        }
-    }
-
-    &.secondary {
-        @apply text-black;
-
-        @apply bg-secondary bg-opacity-[0.15];
-
-        &:hover {
-            @apply bg-secondary bg-opacity-[0.25];
-        }
-    }
+    @apply text-size-custom-button-primary;
 
     > span {
         &.wrapper {
@@ -188,14 +153,6 @@ svg {
     }
 
     &:hover {
-        transform                           : translateY(-5px);
-
-        &:before {
-            @apply opacity-50;
-
-            bottom                          : -10px;
-        }
-
         > span {
             &.wrapper {
                 > span {
@@ -221,6 +178,127 @@ svg {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-solid {
+    @apply rounded-custom-md;
+
+    width                               : calc(225 / var(--vw) * var(--multiplier));
+
+    padding                             : calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
+
+    &:before {
+        @apply absolute;
+
+        @apply h-full;
+
+        @apply opacity-0;
+
+        @apply rounded-full;
+
+        content                         : ''; 
+
+        z-index                         : -1;
+
+        width                           : 90%;
+
+        bottom                          : 0;
+        left                            : 5%;
+
+        background                      : inherit;
+
+        filter                          : blur(15px);
+    }
+
+    &.primary {
+        @apply text-color-custom-white;
+
+        @apply bg-color-custom-primary;
+
+        &:hover {
+            @apply bg-opacity-[0.90];
+        }
+    }
+
+    &.quarter {
+        @apply text-color-custom-black;
+
+        @apply bg-color-custom-quarter;
+
+        &:hover {
+            @apply bg-color-custom-quarter;
+        }
+    }
+
+    &.light {
+        @apply text-color-custom-black;
+
+        @apply bg-color-custom-white;
+    }
+
+    &:hover {
+        transform                           : translateY(-5px);
+
+        &:before {
+            @apply opacity-40;
+
+            bottom                          : -10px;
+        }
+    }
+}
+
+.btn-transparent {
+    @apply text-size-custom-button-secondary;
+
+    @apply text-primary;
+
+    &.primary {
+        @apply text-primary;
+    }
+
+    > span {
+        &.wrapper {
+            @apply flex;
+
+            @apply items-center;
+
+            > span {
+                &.icon {
+                    @apply inline-flex;
+
+                    @apply items-center;
+
+                    @apply justify-center;
+
+                    @apply ml-custom-3;
+
+                    @apply bg-white;
+
+                    @apply rounded-full;
+
+                    width                   : calc(45 / var(--vw) * var(--multiplier));
+                    height                  : calc(45 / var(--vw) * var(--multiplier));
+
+                    svg {
+                        width                   : calc(25 / var(--vw) * var(--multiplier));
+                        height                  : calc(25 / var(--vw) * var(--multiplier));       
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        > span {
+            &.wrapper {
+                > span {
+                    &.icon {
+                        @apply scale-90;
                     }
                 }
             }
