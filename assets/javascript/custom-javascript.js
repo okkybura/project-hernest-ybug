@@ -42,53 +42,55 @@ targets.forEach(target => {
 /* -------------------- GSAP Setting -------------------- */
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(Observer, ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText)
-});
+    gsap.registerPlugin(Observer, ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
 
-// Scroll Smoother
+    // Scroll Smoother
 
-ScrollSmoother.create({
-    smooth: 1,
-    effects: true,
-    smoothTouch: 0.5,
-});
+    ScrollSmoother.create({
+        smooth: 1,
+        effects: true,
+        smoothTouch: 0.5,
+    });
 
-document.querySelectorAll(".text-mask").forEach((el) => {
-    const splitText = SplitText.create(el, {
-        type: "chars,words,lines",
-        linesClass: "line",
-        autoSplit: true,
-        mask: "lines",
+    document.querySelectorAll(".text-mask").forEach((el) => {
+        const splitText = SplitText.create(el, {
+            type: "chars,words,lines",
+            linesClass: "line",
+            autoSplit: true,
+            mask: "lines",
+        });
+    });
+
+    // Split Text
+
+    document.querySelectorAll(".text-mask-reveal").forEach((el) => {
+        const start = el.dataset.start || "top 75%";
+        const splitText = SplitText.create(el, {
+            type: "words,lines",
+            linesClass: "line",
+            autoSplit: true,
+            mask: "lines",
+            onSplit: (self) => {
+                gsap.set(self.lines, { yPercent: 100 });
+                ScrollTrigger.create({
+                    trigger: el,
+                    start: start,
+                    markers: false,
+                    onEnter: () => {
+                        gsap.to(self.lines, {
+                            duration: 1.5,
+                            yPercent: 0,
+                            stagger: 0.065,
+                            ease: "expo.out",
+                        });
+                    },
+                });
+            }
+        });
     });
 });
 
-// Split Text
 
-document.querySelectorAll(".text-mask-reveal").forEach((el) => {
-    const start = el.dataset.start || "top 75%";
-    const splitText = SplitText.create(el, {
-        type: "words,lines",
-        linesClass: "line",
-        autoSplit: true,
-        mask: "lines",
-        onSplit: (self) => {
-            gsap.set(self.lines, { yPercent: 100 });
-            ScrollTrigger.create({
-                trigger: el,
-                start: start,
-                markers: false,
-                onEnter: () => {
-                    gsap.to(self.lines, {
-                        duration: 1.5,
-                        yPercent: 0,
-                        stagger: 0.065,
-                        ease: "expo.out",
-                    });
-                },
-            });
-        }
-    });
-});
 
 /* -------------------- Flickty Setting -------------------- */
 

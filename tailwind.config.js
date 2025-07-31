@@ -1,49 +1,57 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./**/*.html"],
   // content: [
   //   "./src/**/*.{html,js,ts,jsx,tsx,mdx}",
   // ],
   theme: {
-    screens: {
-      "2xl": { max: "1980px" },
-      "xl": { max: "1680px" },
-      "lg": { max: "1440px" },
-      "md": { max: "1024px" },
-      "sm": { max: "769px" },
-      "xs": { max: "480px" },
-      "xxs": { max: "379px" }
-    },
     extend: {
       container: {
         center: true,
         padding: '1rem',
-        screens: {
-          '2xl': '1140px',
-          xl: '1140px',
-          lg: '960px',
-          md: '720px',
-          sm: '540px',
-          xs: '100%',
-          xxs: '100%',
-        },
       },
+
+      height: {
+        screen: "100vh",
+      },
+      padding: {
+        'custom-1': 'calc(5 / 1500 * 100vw)',
+        'custom-2': 'calc(10 / 1500 * 100vw)',
+        'custom-3': 'calc(15 / 1500 * 100vw)',
+        'custom-4': 'calc(20 / 1500 * 100vw)',
+        'custom-5': 'calc(35 / 1500 * 100vw)',
+      },
+      margin: {
+        'custom-1': 'calc(5 / 1500 * 100vw)',
+        'custom-2': 'calc(10 / 1500 * 100vw)',
+        'custom-3': 'calc(15 / 1500 * 100vw)',
+        'custom-4': 'calc(20 / 1500 * 100vw)',
+        'custom-5': 'calc(35 / 1500 * 100vw)',
+      },
+
+      fontFamily: {
+        dmSans: ['DM Sans', 'sans-serif'],
+      },
+      fontSize: {
+        'title-primary': ['calc(55 / 1500 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
+        'subtitle-primary': ['calc(21 / 1500 * 100vw)', { lineHeight: '1.65'}],
+        'subtitle-secondary': ['calc(28 / 1500 * 100vw)', { lineHeight: '1.65'}],
+        'description-primary': ['calc(16 / 1500 * 100vw)', { lineHeight: '1.75'}],
+        'button-primary': ['calc(19 / 1500 * 100vw)', { lineHeight: '1.25'}],
+      },
+      
       colors: {
         primary: '#4444DD',
         secondary: '#595CFF',
         black: '#40404A',
       },
-      height: {
-        screen: "100vh",
-      },
-      fontFamily: {
-        archivo: ["Archivo", "sans-serif"],
-        bebasNeue: ["BebasNeue", "sans-serif"],
-        cabinetGrotesk: ["CabinetGrotesk", "sans-serif"],
-        clashDisplay: ["ClashDisplay", "sans-serif"],
-        familjenGrotesk: ["FamiljenGrotesk", "sans-serif"],
-        switzer: ["Switzer", "sans-serif"],
-      },
+
+      borderRadius: {
+        'custom-medium': 'calc(10 / 1500 * 100vw)',
+      }
     },
   },
   plugins: [],

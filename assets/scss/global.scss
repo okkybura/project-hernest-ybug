@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ----- Variables ----- */
+
+:root {
+    --vw                                : 1500;
+    --multiplier                        : 100vw;
+
+    --font-size-general                 : 16;
+    --font-size-title                   : 165;
+    --font-size-subtitle                : 14;
+    --font-size-description             : 16;
+    --font-size-date                    : 16;
+    --font-size-caption                 : 16;
+    --font-size-number                  : 47.5;
+    --font-size-link                    : 14;
+    --font-size-button                  : 16;
+    --font-size-icon                    : 12;
+
+    // Transition
+
+    --cubic-bezier-1                    : cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+@media (max-width: 1080px) {
+    :root {
+        --vw: 900;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --vw: 400;
+    }
+}
+
+body {
+    @apply pr-0;
+
+    @apply font-dmSans;
+
+    @apply text-black;
+
+    @apply bg-white;
+
+    font-size                           : calc(16 / var(--vw) * var(--multiplier));
+}
+
+a {
+    transition                          : 0.75s var(--cubic-bezier-1);
+
+    * {
+        transition                      : 0.75s var(--cubic-bezier-1);
+    }
+
+    &:before, &:after {
+        transition                      : 0.75s var(--cubic-bezier-1);
+    }
+}
+
+a:not(.btn):hover {
+    @apply text-primary;
+}
+
+.container {
+    max-width                           : 90% !important; 
+}
+
+svg {
+    width                               : calc(20 / var(--vw) * var(--multiplier));
+    height                              : calc(20 / var(--vw) * var(--multiplier));
+}
+
+.wizard {
+    @apply relative;
+}
+
+/* Font */
+
+.text-title-primary {
+    @apply font-bold;
+}
+
+.text-title-primary span {
+    @apply text-secondary;
+}
+
+/* Button */
+
+.btn-default {
+    @apply relative;
+    
+    @apply inline-block;
+
+    @apply text-center;
+
+    @apply font-semibold;
+    @apply text-button-primary;
+}
+
+.btn-solid {
+    @apply bg-primary;
+    
+    @apply rounded-custom-medium;
+
+    width                               : calc(225 / var(--vw) * var(--multiplier));
+
+    padding                             : calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
+
+    &:before {
+        @apply absolute;
+
+        @apply h-full;
+
+        @apply opacity-0;
+
+        @apply rounded-full;
+
+        content                         : ''; 
+
+        z-index                         : -1;
+
+        width                           : 90%;
+
+        bottom                          : 0;
+        left                            : 5%;
+
+        background                      : inherit;
+
+        filter                          : blur(15px);
+    }
+
+    &.primary {
+        @apply text-white;
+
+        &:hover {
+            @apply bg-opacity-[0.90];
+        }
+    }
+
+    &.secondary {
+        @apply text-black;
+
+        @apply bg-secondary bg-opacity-[0.15];
+
+        &:hover {
+            @apply bg-secondary bg-opacity-[0.25];
+        }
+    }
+
+    > span {
+        &.wrapper {
+            > span {
+                @apply relative;
+
+                &.text {
+                    @apply block;
+
+                    @apply overflow-hidden;
+
+                    > span {
+                        @apply block;   
+                        
+                        &:nth-child(2) {
+                            @apply absolute;
+
+                            @apply w-full;
+
+                            top                         : 100%;
+                        }                  
+
+                        > span {
+                            @apply inline-block;
+
+                            white-space                 : pre;
+
+                            @for $i from 1 through 25 {
+                                &:nth-child(#{$i}) {
+                                    transition-delay    : #{($i - 1) * 0.005}s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        transform                           : translateY(-5px);
+
+        &:before {
+            @apply opacity-50;
+
+            bottom                          : -10px;
+        }
+
+        > span {
+            &.wrapper {
+                > span {
+                    &.text {
+                        > span {
+                            &:nth-child(1) {
+                                > span {
+                                    transform                   : translateY(-100%);
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                > span {
+                                    transform                   : translateY(-100%);
+                                }
+                            }
+
+                            > span {
+                                @for $i from 1 through 25 {
+                                    &:nth-child(#{$i}) {
+                                        transition-delay        : #{($i - 1) * 0.0125}s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.marquee-fade-horizontal {
+    mask-image                      : linear-gradient(to right, rgba(0, 0, 0, 0) 2.5%, rgb(0, 0, 0) 23%, rgb(0, 0, 0) 77%, rgba(0, 0, 0, 0) 97.5%);
+}
