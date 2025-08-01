@@ -59,6 +59,7 @@ module.exports = {
       fontSize: {
         'size-custom-title-primary': ['calc(55 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
         'size-custom-title-secondary': ['calc(36 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
+        'size-custom-title-tertiary': ['calc(27 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
 
         'size-custom-subtitle-primary': ['calc(21 / 1600 * 100vw)', { lineHeight: '1.65'}],
         'size-custom-subtitle-secondary': ['calc(28 / 1600 * 100vw)', { lineHeight: '1.65'}],

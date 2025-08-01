@@ -56,14 +56,14 @@ body {
 }
 
 a {
-    transition                          : 0.75s var(--cubic-bezier-1);
+    transition                          : 0.65s var(--cubic-bezier-1);
 
     * {
-        transition                      : 0.75s var(--cubic-bezier-1);
+        transition                      : 0.65s var(--cubic-bezier-1);
     }
 
     &:before, &:after {
-        transition                      : 0.75s var(--cubic-bezier-1);
+        transition                      : 0.65s var(--cubic-bezier-1);
     }
 }
 
@@ -86,8 +86,25 @@ svg {
 
 // Background
 
+@keyframes animate-bg-custom-gradient-primary {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .bg-custom-gradient-primary {
-    background                          : linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 90%);
+    background                              : linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 90%);
+
+    &.bg-custom-animate-gradient-primary {
+        background-size                     : 200% 200%;
+        animation                           : animate-bg-custom-gradient-primary 10s ease infinite;
+    }
 }
 
 /* Text */
@@ -225,6 +242,22 @@ svg {
         }
     }
 
+    &.secondary-light {
+        @apply text-color-custom-primary;
+
+        @apply bg-color-custom-quarter;
+
+        &:before {
+            @apply bg-color-custom-secondary;
+        }
+
+        &:hover {
+            @apply text-white;
+            
+            @apply bg-color-custom-secondary;
+        }
+    }
+
     &.quarter {
         @apply text-color-custom-black;
 
@@ -299,6 +332,94 @@ svg {
                 > span {
                     &.icon {
                         @apply scale-90;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Card
+
+.feature-card {
+
+    // Secondary
+
+    &.secondary {
+        transition                  : 0.65s var(--cubic-bezier-1);
+
+        * {
+            transition              : 0.65s var(--cubic-bezier-1);
+        }
+
+        &:before {
+            @apply absolute;
+
+            @apply h-full;
+
+            @apply opacity-0;
+
+            @apply bg-secondary;
+
+            @apply rounded-custom-lg;
+
+            content                         : ''; 
+
+            z-index                         : -1;
+
+            width                           : 85%;
+
+            bottom                          : 0;
+            left                            : 5%;
+
+            filter                          : blur(15px);
+
+            transition                      : 0.65s var(--cubic-bezier-1);
+        }
+
+        &:hover {
+            transform                       : translateY(-15px);
+
+            &:before {
+                @apply opacity-40;
+
+                bottom                      : -20px;
+            }
+
+            > .wrapper-inner {
+                @apply bg-secondary;
+            }
+
+            .content-icon {
+                .icon {
+                    > span {
+                        @apply bg-white;
+
+                        @apply border-white;
+
+                        transform                       : translateY(-7.5px);  
+                    }
+                }
+            }
+
+            .content-text {
+                .subtitle {
+                    .text-subtitle-primary {
+                        @apply text-white;
+                    }
+                }
+
+                .desc {
+                    .text-description-primary {
+                        @apply text-white;
+                    }
+                }
+            }
+
+            .content-button {
+                .button {
+                    .btn-default {
+                        @apply text-white;
                     }
                 }
             }
