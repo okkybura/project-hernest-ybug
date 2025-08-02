@@ -39,13 +39,13 @@ body {
   font-size: calc(16 / var(--vw) * var(--multiplier));
 }
 
-a {
+a, button {
   transition: 0.65s var(--cubic-bezier-1);
 }
-a * {
+a *, button * {
   transition: 0.65s var(--cubic-bezier-1);
 }
-a:before, a:after {
+a:before, a:after, button:before, button:after {
   transition: 0.65s var(--cubic-bezier-1);
 }
 
@@ -325,6 +325,18 @@ svg {
   @apply text-color-custom-black;
   @apply bg-color-custom-white;
 }
+.btn-solid.gradient-secondary {
+  @apply text-color-custom-white;
+  background: linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 100%);
+  background-size: 300% 300%;
+}
+.btn-solid.gradient-secondary:before {
+  background: linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 100%);
+  background-size: 100% 100%;
+}
+.btn-solid.gradient-secondary:hover {
+  background-size: 100% 100%;
+}
 .btn-solid:hover {
   transform: translateY(-5px);
 }
@@ -360,6 +372,232 @@ svg {
 }
 .btn-transparent:hover > span.wrapper > span.icon {
   @apply scale-90;
+}
+
+.link-default {
+  @apply relative;
+  @apply text-white;
+  font-family: var(--font-family-link);
+  font-weight: var(--font-weight-link);
+  font-size: calc(var(--font-size-link) / var(--vw) * var(--multiplier));
+  line-height: calc(var(--font-size-link) / var(--vw) * var(--multiplier) * 1.5);
+}
+.link-default > span.wrapper {
+  @apply relative;
+  @apply inline-flex;
+  @apply items-center;
+  @apply overflow-hidden;
+  padding: calc(10 / var(--vw) * var(--multiplier)) 0;
+}
+.link-default > span.wrapper:before, .link-default > span.wrapper:after {
+  @apply absolute;
+  @apply w-full;
+  @apply bg-white;
+  content: "";
+  height: calc(1 / var(--vw) * var(--multiplier));
+  bottom: calc(1 / var(--vw) * var(--multiplier));
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.65s var(--cubic-bezier-1);
+}
+.link-default > span.wrapper:before {
+  transform-origin: right;
+}
+.link-default > span.wrapper:after {
+  transition: unset;
+  transform-origin: left;
+}
+.link-default > span.wrapper > span {
+  @apply relative;
+  z-index: 20;
+}
+.link-default > span.wrapper > span.text {
+  @apply flex;
+  @apply items-center;
+  @apply overflow-hidden;
+}
+.link-default > span.wrapper > span.text > span {
+  @apply block;
+  @apply overflow-hidden;
+  z-index: 20;
+}
+.link-default > span.wrapper > span.text > span:nth-child(2) {
+  @apply absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.link-default > span.wrapper > span.text > span:nth-child(2) > span {
+  transform: translateY(100%);
+}
+.link-default > span.wrapper > span.text > span > span {
+  @apply inline-block;
+  white-space: pre;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(2) {
+  transition-delay: 0.005s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(3) {
+  transition-delay: 0.01s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(4) {
+  transition-delay: 0.015s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(5) {
+  transition-delay: 0.02s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(6) {
+  transition-delay: 0.025s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(7) {
+  transition-delay: 0.03s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(8) {
+  transition-delay: 0.035s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(9) {
+  transition-delay: 0.04s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(10) {
+  transition-delay: 0.045s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(11) {
+  transition-delay: 0.05s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(12) {
+  transition-delay: 0.055s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(13) {
+  transition-delay: 0.06s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(14) {
+  transition-delay: 0.065s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(15) {
+  transition-delay: 0.07s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(16) {
+  transition-delay: 0.075s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(17) {
+  transition-delay: 0.08s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(18) {
+  transition-delay: 0.085s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(19) {
+  transition-delay: 0.09s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(20) {
+  transition-delay: 0.095s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(21) {
+  transition-delay: 0.1s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(22) {
+  transition-delay: 0.105s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(23) {
+  transition-delay: 0.11s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(24) {
+  transition-delay: 0.115s;
+}
+.link-default > span.wrapper > span.text > span > span:nth-child(25) {
+  transition-delay: 0.12s;
+}
+.link-default:hover > span.wrapper:before, .link-default:hover > span.wrapper:after {
+  transform: scaleX(1);
+}
+.link-default:hover > span.wrapper:before {
+  transition: unset;
+  transition-delay: 0.325s;
+}
+.link-default:hover > span.wrapper:after {
+  transition-duration: 0.65s;
+}
+.link-default:hover > span > span.text > span:nth-child(1) > span {
+  transform: translateY(-100%);
+}
+.link-default:hover > span > span.text > span:nth-child(2) > span {
+  transform: translateY(0%);
+}
+.link-default:hover > span > span.text > span > span:nth-child(1) {
+  transition-delay: 0s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(2) {
+  transition-delay: 0.0075s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(3) {
+  transition-delay: 0.015s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(4) {
+  transition-delay: 0.0225s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(5) {
+  transition-delay: 0.03s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(6) {
+  transition-delay: 0.0375s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(7) {
+  transition-delay: 0.045s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(8) {
+  transition-delay: 0.0525s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(9) {
+  transition-delay: 0.06s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(10) {
+  transition-delay: 0.0675s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(11) {
+  transition-delay: 0.075s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(12) {
+  transition-delay: 0.0825s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(13) {
+  transition-delay: 0.09s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(14) {
+  transition-delay: 0.0975s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(15) {
+  transition-delay: 0.105s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(16) {
+  transition-delay: 0.1125s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(17) {
+  transition-delay: 0.12s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(18) {
+  transition-delay: 0.1275s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(19) {
+  transition-delay: 0.135s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(20) {
+  transition-delay: 0.1425s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(21) {
+  transition-delay: 0.15s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(22) {
+  transition-delay: 0.1575s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(23) {
+  transition-delay: 0.165s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(24) {
+  transition-delay: 0.1725s;
+}
+.link-default:hover > span > span.text > span > span:nth-child(25) {
+  transition-delay: 0.18s;
 }
 
 .feature-card.secondary {

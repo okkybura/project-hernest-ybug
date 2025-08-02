@@ -184,6 +184,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
         }
     });
+
+    // Splitting Text - Link - Navbar
+
+    document.querySelectorAll('.link-default').forEach(link => {
+
+        const textSpan = link.querySelector('.text');
+
+        if (textSpan) {
+            const text = textSpan.textContent.trim();
+            let charSpans = '';
+
+            text.split('').forEach(char => {
+                charSpans += `<span>${char}</span>`;
+            });
+
+            textSpan.innerHTML = `
+                        <span>${charSpans}</span>
+                        <span>${charSpans}</span>
+                    `;
+        }
+    });
 });
 
 /* -------------------- Navbar Setting -------------------- */

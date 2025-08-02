@@ -55,7 +55,7 @@ body {
     font-size                           : calc(16 / var(--vw) * var(--multiplier));
 }
 
-a {
+a, button {
     transition                          : 0.65s var(--cubic-bezier-1);
 
     * {
@@ -274,6 +274,24 @@ svg {
         @apply bg-color-custom-white;
     }
 
+    &.gradient-secondary {
+        @apply text-color-custom-white;
+
+        background                          : linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 100%);
+
+        background-size                     : 300% 300%;
+
+        &:before {
+            background                      : linear-gradient(120deg, var(--color-secondary) 45%, var(--color-tertiary) 100%);
+
+            background-size                 : 100% 100%;
+        }
+
+        &:hover {
+            background-size                 : 100% 100%;
+        }
+    }
+
     &:hover {
         transform                           : translateY(-5px);
 
@@ -332,6 +350,154 @@ svg {
                 > span {
                     &.icon {
                         @apply scale-90;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Link
+
+.link-default {
+    @apply relative;
+
+    @apply text-white;
+
+    font-family         : var(--font-family-link);
+    font-weight         : var(--font-weight-link);
+    font-size           : calc(var(--font-size-link) / var(--vw) * var(--multiplier));
+
+    line-height         : calc(calc(var(--font-size-link) / var(--vw) * var(--multiplier)) * 1.5);
+
+    > span {
+        &.wrapper {
+            @apply relative;
+
+            @apply inline-flex;
+
+            @apply items-center;
+
+            @apply overflow-hidden;
+
+            padding                 : calc(10 / var(--vw) * var(--multiplier)) 0;
+
+            &:before, &:after {
+                @apply absolute;
+
+                @apply w-full;
+
+                @apply bg-white;
+
+                content                 : '';
+
+                height                  : calc(1 / var(--vw) * var(--multiplier));
+
+                bottom                  : calc(1 / var(--vw) * var(--multiplier));
+                left                    : 0;
+
+                transform               : scaleX(0);
+
+                transition              : 0.65s var(--cubic-bezier-1);
+            }
+
+            &:before {
+                transform-origin        : right;
+            }
+
+            &:after {
+                transition              : unset;
+
+                transform-origin        : left;
+            }
+
+            > span {
+                @apply relative;
+
+                z-index                 : 20;
+
+                &.text {
+                    @apply flex;
+
+                    @apply items-center;
+
+                    @apply overflow-hidden;
+
+                    > span {
+                        @apply block;
+
+                        @apply overflow-hidden;
+
+                        z-index                 : 20;
+
+                        &:nth-child(2) {
+                            @apply absolute;
+
+                            top                 : 50%;
+
+                            transform           : translateY(-50%);
+
+                            > span {
+                                transform       : translateY(100%);
+                            }
+                        }
+
+                        > span {
+                            @apply inline-block;
+
+                            white-space                     : pre;
+
+                            @for $i from 1 through 25 {
+                                &:nth-child(#{$i}) {
+                                    transition-delay        : #{($i - 1) * 0.005}s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        > span {
+            &.wrapper {
+                &:before, &:after {
+                    transform               : scaleX(1);
+                }
+
+                &:before {
+                    transition              : unset;
+                    transition-delay        : 0.325s;
+                }
+
+                &:after {
+                    transition-duration     : 0.65s;
+                }
+            }
+
+            > span {
+                &.text {
+                    > span {
+                        &:nth-child(1) {
+                            > span {
+                                transform                   : translateY(-100%);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            > span {
+                                transform                   : translateY(0%);
+                            }
+                        }
+
+                        > span {
+                            @for $i from 1 through 25 {
+                                &:nth-child(#{$i}) {
+                                    transition-delay        : #{($i - 1) * 0.0075}s;
+                                }
+                            }
+                        }
                     }
                 }
             }

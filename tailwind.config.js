@@ -60,6 +60,7 @@ module.exports = {
         'size-custom-title-primary': ['calc(55 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
         'size-custom-title-secondary': ['calc(36 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
         'size-custom-title-tertiary': ['calc(27 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
+        'size-custom-title-quarter': ['calc(17 / 1600 * 100vw)', { lineHeight: '1.1'}],
 
         'size-custom-subtitle-primary': ['calc(21 / 1600 * 100vw)', { lineHeight: '1.65'}],
         'size-custom-subtitle-secondary': ['calc(28 / 1600 * 100vw)', { lineHeight: '1.65'}],
@@ -69,6 +70,8 @@ module.exports = {
 
         'size-custom-button-primary': ['calc(19 / 1600 * 100vw)', { lineHeight: '1.25'}],
         'size-custom-button-secondary': ['calc(16 / 1600 * 100vw)', { lineHeight: '1.25'}],
+
+        'size-custom-link-primary': ['calc(17 / 1600 * 100vw)', { lineHeight: '1.25'}],
 
         'size-custom-number-primary': ['calc(55 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
       },
