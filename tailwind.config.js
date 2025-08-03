@@ -26,19 +26,6 @@ module.exports = {
       height: {
         screen: "100vh",
       },
-      padding: {
-        'custom-1': 'calc(5 / 1600 * 100vw)',
-        'custom-2': 'calc(10 / 1600 * 100vw)',
-        'custom-3': 'calc(15 / 1600 * 100vw)',
-        'custom-4': 'calc(25 / 1600 * 100vw)',
-        'custom-5': 'calc(30 / 1600 * 100vw)',
-        'custom-6': 'calc(35 / 1600 * 100vw)',
-        'custom-7': 'calc(40 / 1600 * 100vw)',
-        'custom-8': 'calc(45 / 1600 * 100vw)',
-        'custom-9': 'calc(50 / 1600 * 100vw)',
-        'custom-10': 'calc(100 / 1600 * 100vw)',
-        'custom-15': 'calc(150 / 1600 * 100vw)',
-      },
       margin: {
         'custom-1': 'calc(5 / 1600 * 100vw)',
         'custom-2': 'calc(10 / 1600 * 100vw)',
@@ -57,26 +44,17 @@ module.exports = {
         dmSans: ['DM Sans', 'sans-serif'],
       },
       fontSize: {
-        'size-custom-title-primary': ['calc(55 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
-        'size-custom-title-secondary': ['calc(36 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
-        'size-custom-title-tertiary': ['calc(27 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
-        'size-custom-title-quarter': ['calc(17 / 1600 * 100vw)', { lineHeight: '1.1'}],
-        'size-custom-title-quinary': ['calc(16 / 1600 * 100vw)', { lineHeight: '1.1'}],
+        'size-custom-d1': ['calc(55 / 1600 * 100vw)'],
+        'size-custom-d2': ['calc(55 / 1600 * 100vw)'],
+        'size-custom-d3': ['calc(55 / 1600 * 100vw)'],
+        'size-custom-d4': ['calc(55 / 1600 * 100vw)'],
 
-        'size-custom-subtitle-primary': ['calc(21 / 1600 * 100vw)', { lineHeight: '1.65'}],
-        'size-custom-subtitle-secondary': ['calc(28 / 1600 * 100vw)', { lineHeight: '1.65'}],
-        'size-custom-subtitle-tertiary': ['calc(15 / 1600 * 100vw)', { lineHeight: '1.65'}],
-
-        'size-custom-description-primary': ['calc(16 / 1600 * 100vw)', { lineHeight: '1.75'}],
-        'size-custom-description-secondary': ['calc(17 / 1600 * 100vw)', { lineHeight: '1.75'}],
-        'size-custom-description-tertiary': ['calc(21 / 1600 * 100vw)', { lineHeight: '1.75'}],
-
-        'size-custom-button-primary': ['calc(19 / 1600 * 100vw)', { lineHeight: '1.25'}],
-        'size-custom-button-secondary': ['calc(16 / 1600 * 100vw)', { lineHeight: '1.25'}],
-
-        'size-custom-link-primary': ['calc(17 / 1600 * 100vw)', { lineHeight: '1.25'}],
-
-        'size-custom-number-primary': ['calc(55 / 1600 * 100vw)', { lineHeight: '1.1', letterSpacing: '-0.05em'}],
+        'size-custom-h1': ['calc(48 / 1600 * 100vw)'],
+        'size-custom-h2': ['calc(36 / 1600 * 100vw)'],
+        'size-custom-h3': ['calc(28 / 1600 * 100vw)'],
+        'size-custom-h4': ['calc(24 / 1600 * 100vw)'],
+        'size-custom-h5': ['calc(21 / 1600 * 100vw)'],
+        'size-custom-h6': ['calc(17 / 1600 * 100vw)'],
       },
       
       colors: {
