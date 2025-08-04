@@ -6,7 +6,7 @@
     <!-- Title -->
 
     <title>
-        Website Name - Page Name
+        Ybug - Homepage
     </title>
 
     <!-- Meta -->
@@ -14,6 +14,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!------- CSS ------->
 
@@ -45,7 +47,7 @@
 
                             <!-- Navbar - Primary -->
 
-                            <navbar class="navbar primary">
+                            <navbar class="navbar primary hidden md:block">
                                 <div class="navbar-wrapper primary">
                                     <div class="wrapper-inner">
                                         <div class="navbar-notification
@@ -59,13 +61,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="wrapper-inner">
-
-                                    </div>
                                 </div>
                             </navbar>
 
-                            <nav x-data="{ open: false }" @keydown.window.escape="open = false" class="relative overflow-visible z-50 bg-white">
+                            <nav x-data="{ open: false }" @keydown.window.escape="open = false" class="navbar primary relative overflow-visible z-50 bg-white">
                                 <div class="container
                                             py-custom-2">
                                     <div class="flex items-center justify-between h-16">
@@ -73,7 +72,8 @@
                                             <div class="flex-shrink-0">
                                                 <a class="navbar-brand
                                                           inline-block" href="#">
-                                                    <img class="inline-block w-[calc((175*var(--multiplier))/var(--vw))]" src="/assets/images/logo/logo-navbar-primary.png" />
+                                                    <img class="inline-block
+                                                                w-[calc((125*var(--multiplier))/var(--vw))] lg:w-[calc((175*var(--multiplier))/var(--vw))]" src="/assets/images/logo/logo-navbar-primary.png" />
                                                 </a>
                                             </div>
                                             <div class="hidden lg:block
@@ -84,7 +84,7 @@
                                                             class="flex items-center link-default text-link-secondary font-bold text-size-custom-h6 text-black
                                                                    mx-custom-3">
                                                             <span class="wrapper
-                                                                         mr-custom-3">
+                                                                         mr-custom-2">
                                                                 <span class="text">
                                                                     Solutions
                                                                 </span>
@@ -141,7 +141,7 @@
                                                             class="flex items-center link-default text-link-secondary font-bold text-size-custom-h6 text-black
                                                                    mx-custom-3">
                                                             <span class="wrapper
-                                                                         mr-custom-3">
+                                                                         mr-custom-2">
                                                                 <span class="text">
                                                                     Resources
                                                                 </span>
@@ -189,7 +189,8 @@
                                             </div>
                                             <div class="flex items-center">
                                                 <a class="link-default text-link-secondary font-bold text-size-custom-h6 text-black
-                                                            mr-custom-4" href="#">
+                                                          hidden lg:block
+                                                            mr-custom-5" href="#">
                                                     <span class="wrapper">
                                                         <span class="text">
                                                             Sign In
@@ -197,8 +198,8 @@
                                                     </span>
                                                 </a>
                                                 <a class="btn btn-block btn-default btn-solid gradient-secondary
-                                                            py-[calc((12.5*var(--multiplier))/var(--vw))] px-custom-5
-                                                            !w-[calc((150*var(--multiplier))/var(--vw))]" href="#">
+                                                            py-[calc((10*var(--multiplier))/var(--vw))] px-custom-4 md:py-[calc((12.5*var(--multiplier))/var(--vw))] md:px-custom-5
+                                                            !w-[calc((140*var(--multiplier))/var(--vw))] md:!w-[calc((150*var(--multiplier))/var(--vw))]" href="#">
                                                     <span class="wrapper">
                                                         <span class="text">
                                                             Start free
@@ -207,11 +208,11 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="flex -mr-2 lg:hidden">
+                                        <div class="flex ml-custom-3 lg:hidden">
                                             <button @click="open = !open"
-                                                class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+                                                class="inline-flex items-center justify-center"
                                                 x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" x-bind:aria-expanded="open">
-                                                <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                                <svg class="w-6 h-6 fill-black" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                                     <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex"
                                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                         d="M4 6h16M4 12h16M4 18h16" />
@@ -223,190 +224,107 @@
                                     </div>
                                 </div>
                                 <div :class="{'block': open, 'hidden': !open}" class="hidden lg:hidden">
-                                    <div class="container px-6 mx-auto">
-                                        <div class="pt-2 pb-3">
-                                            <a href="#"
-                                                class="flex flex-row items-center px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-home">
-                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    <div class="py-custom-2 px-custom-4">
+                                        <div class="relative" x-data="{ open: false }">
+                                            <button @click="open = true"
+                                                class="flex items-center link-default text-link-secondary font-bold text-size-custom-h6 text-black
+                                                       w-full justify-between">
+                                                <span class="wrapper
+                                                                mr-custom-2">
+                                                    <span class="text">
+                                                        Solutions
+                                                    </span>
+                                                </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                    class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-chevron-down">
+                                                    <polyline points="6 9 12 15 18 9"></polyline>
                                                 </svg>
-                                                <span class="ml-2">Dashboard</span>
-                                            </a>
-                                            <a href="#"
-                                                class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-file">
-                                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                                    <polyline points="13 2 13 9 20 9"></polyline>
-                                                </svg>
-                                                <span class="ml-2">Posts</span>
-                                            </a>
-                                            <div class="relative" x-data="{ open: false }">
-                                                <button @click="open = true"
-                                                    class="flex flex-row items-center w-full px-3 py-2 mt-1 text-base font-medium text-left text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-folder">
-                                                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="mx-2">Pages</span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
-                                                        class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-chevron-down">
-                                                        <polyline points="6 9 12 15 18 9"></polyline>
-                                                    </svg>
-                                                </button>
-                                                <div x-show="open" @click.away="open = false" class="px-2 py-2 mt-2 bg-white rounded-md shadow-xs"
-                                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Pages-1
-                                                    </a>
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Pages-2
-                                                    </a>
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Pages-3
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-message-circle">
-                                                    <path
-                                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                                                    </path>
-                                                </svg>
-                                                <span class="ml-2">Comments</span>
-                                            </a>
-                                            <div class="relative" x-data="{ open: false }">
-                                                <button @click="open = true"
-                                                    class="flex flex-row items-center w-full px-3 py-2 mt-1 text-base font-medium text-left text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-users">
-                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                                        <circle cx="9" cy="7" r="4"></circle>
-                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                                    </svg>
-                                                    <span class="mx-2">Users</span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
-                                                        class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-chevron-down">
-                                                        <polyline points="6 9 12 15 18 9"></polyline>
-                                                    </svg>
-                                                </button>
-                                                <div x-show="open" @click.away="open = false" class="px-2 py-2 mt-2 bg-white rounded-md shadow-xs"
-                                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Users-1
-                                                    </a>
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Users-2
-                                                    </a>
-                                                    <a href="#"
-                                                        class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
-                                                        role="menuitem">
-                                                        Users-3
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="feather feather-settings">
-                                                    <circle cx="12" cy="12" r="3"></circle>
-                                                    <path
-                                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                                    </path>
-                                                </svg>
-                                                <span class="ml-2">Settings</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="container px-6 mx-auto">
-                                        <div x-data="{ open: false }" class="py-4 border-t border-gray-700">
-                                            <button @click="open = true" class="flex items-center w-full focus:outline-none">
-                                                <div class="flex items-center w-full text-left">
-                                                    <div class="flex-shrink-0">
-                                                        <img class="w-10 h-10 rounded-full"
-                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                                            alt="" />
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-                                                        <div class="mt-1 text-sm font-medium leading-none text-gray-400">tom@example.com</div>
-                                                    </div>
-                                                </div>
-                                                <div class="text-white">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
-                                                        class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-chevron-down">
-                                                        <polyline points="6 9 12 15 18 9"></polyline>
-                                                    </svg>
-                                                </div>
                                             </button>
-                                            <div x-show="open" @click.away="open = false" class="py-2 mt-4 bg-white rounded-md shadow-xs"
+                                            <div x-show="open" @click.away="open = false" class="px-2 py-2 mt-2 bg-white rounded-md shadow-xs"
                                                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
                                                 <a href="#"
                                                     class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
                                                     role="menuitem">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-user">
-                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                                        <circle cx="12" cy="7" r="4"></circle>
-                                                    </svg>
-                                                    <span class="ml-2">Your Profile</span>
+                                                    Pages-1
                                                 </a>
                                                 <a href="#"
                                                     class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
                                                     role="menuitem">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-settings">
-                                                        <circle cx="12" cy="12" r="3"></circle>
-                                                        <path
-                                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="ml-2">Settings</span>
+                                                    Pages-2
                                                 </a>
                                                 <a href="#"
-                                                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-red-500 rounded-md hover:text-red-700 hover:bg-red-200 focus:outline-none focus:text-red-700 focus:bg-red-200"
+                                                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
                                                     role="menuitem">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="feather feather-log-out">
-                                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                                        <polyline points="16 17 21 12 16 7"></polyline>
-                                                        <line x1="21" y1="12" x2="9" y2="12"></line>
-                                                    </svg>
-                                                    <span class="ml-2">Sign out</span>
+                                                    Pages-3
                                                 </a>
                                             </div>
                                         </div>
+                                        <a class="link-default text-link-secondary block font-bold text-size-custom-h6 text-black" href="#">
+                                            <span class="wrapper">
+                                                <span class="text">
+                                                    Integrations
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="link-default text-link-secondary block font-bold text-size-custom-h6 text-black" href="#">
+                                            <span class="wrapper">
+                                                <span class="text">
+                                                    Pricing
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <div class="relative" x-data="{ open: false }">
+                                            <button @click="open = true"
+                                                class="flex items-center link-default text-link-secondary font-bold text-size-custom-h6 text-black
+                                                       w-full justify-between">
+                                                <span class="wrapper
+                                                                mr-custom-2">
+                                                    <span class="text">
+                                                        Resources
+                                                    </span>
+                                                </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                    class="w-4 h-4 mt-1 transform" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-chevron-down">
+                                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                                </svg>
+                                            </button>
+                                            <div x-show="open" @click.away="open = false" class="px-2 py-2 mt-2 bg-white rounded-md shadow-xs"
+                                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu" role="menuitem">
+                                                <a href="#"
+                                                    class="flex flex-row items-center px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                                                    role="menuitem">
+                                                    Pages-1
+                                                </a>
+                                                <a href="#"
+                                                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                                                    role="menuitem">
+                                                    Pages-2
+                                                </a>
+                                                <a href="#"
+                                                    class="flex flex-row items-center px-3 py-2 mt-1 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:text-gray-900 focus:bg-gray-200"
+                                                    role="menuitem">
+                                                    Pages-3
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a class="link-default text-link-secondary block font-bold text-size-custom-h6 text-black" href="#">
+                                            <span class="wrapper">
+                                                <span class="text">
+                                                    Contact
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="link-default text-link-secondary block font-bold text-size-custom-h6 text-black" href="#">
+                                            <span class="wrapper">
+                                                <span class="text">
+                                                    Sign In
+                                                </span>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                             </nav>
@@ -420,9 +338,9 @@
                                                 overflow-hidden
                                                 flex
                                                 items-center
-                                                w-[96.5%]
-                                                h-screen
-                                                p-custom-5
+                                                w-full md:w-[96.5%]
+                                                h-full lg:h-screen
+                                                p-custom-2 md:p-custom-5
                                                 mx-auto
                                               bg-color-custom-quinary
                                                 rounded-custom-md">
@@ -453,10 +371,13 @@
                                                 <div class="wrapper-inner">
                                                     <div class="container">
                                                         <div class="col-content-outer grid grid-cols-12 gap-6">
-                                                            <div class="col-content-inner col-span-6">
+                                                            <div class="col-content-inner
+                                                                        col-span-12 lg:col-span-6
+                                                                        md:mb-minus-custom-10">
                                                                 <div class="content-text mb-custom-5">
                                                                     <div class="title mb-custom-4">
-                                                                        <h1 class="text-title-primary text-size-custom-d4
+                                                                        <h1 class="text-title-primary
+                                                                                   text-size-custom-h1 md:text-size-custom-d4
                                                                                    font-bold
                                                                                    letter-spacing-[-0.05em]
                                                                                    leading-[1.10]">
@@ -479,9 +400,11 @@
                                                                             inline-flex">
                                                                     <div class="button-wrapper primary">
                                                                         <div class="wrapper-inner
-                                                                                    flex items-center
+                                                                                    flex items-start md:items-center
+                                                                                    flex-col md:flex-row
                                                                                     mb-custom-5">
                                                                             <div class="button
+                                                                                        mb-custom-2 md:mb-0
                                                                                         mr-custom-3">
                                                                                 <a class="btn btn-block btn-default btn-solid gradient-secondary" href="#">
                                                                                     <span class="wrapper">
@@ -504,7 +427,8 @@
                                                                         <div class="wrapper-inner">
                                                                             <div class="button-caption">
                                                                                 <div class="caption
-                                                                                            text-center">
+                                                                                            text-center
+                                                                                            text-size-custom-smallest md:text-size-custom-p">
                                                                                     <span>
                                                                                         <span class="flex items-center justify-center
                                                                                                     mb-1">
@@ -543,7 +467,10 @@
                                                                                                     </svg>
                                                                                                 </span>
                                                                                             </span>
-                                                                                            average rating across major review sites
+                                                                                            <span class="whitespace-nowrap">
+                                                                                                average rating across major review sites
+                                                                                            </span>
+                                                                                            
                                                                                         </span>
                                                                                         <span class="font-bold">
                                                                                             <a href="#">
@@ -565,8 +492,51 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-content-inner col-span-5">
-
+                                                            <div class="col-content-inner col-span-12 lg:col-span-5
+                                                                        relative lg:static">
+                                                                <div class="content-element">
+                                                                    <div class="element
+                                                                                absolute
+                                                                                z-10
+                                                                                w-[calc((150*var(--multiplier))/var(--vw))] md:w-[calc((200*var(--multiplier))/var(--vw))]
+                                                                                bottom-[calc((25*var(--multiplier))/var(--vw))] md:bottom-[calc((-85*var(--multiplier))/var(--vw))] lg:bottom-[calc((-75*var(--multiplier))/var(--vw))]
+                                                                                left-[calc((-25*var(--multiplier))/var(--vw))] md:left-0 lg:left-[calc((700*var(--multiplier))/var(--vw))]
+                                                                                animate-[bounce_8.5s_ease-in-out_infinite]">
+                                                                        <img src="/assets/images/root/hero-primary-content-element-1.png" />
+                                                                    </div>
+                                                                    <div class="element
+                                                                                absolute
+                                                                                hidden md:block
+                                                                                z-10
+                                                                                w-[calc((200*var(--multiplier))/var(--vw))]
+                                                                                md:top-[calc((125*var(--multiplier))/var(--vw))] lg:top-[calc((-25*var(--multiplier))/var(--vw))]
+                                                                                right-0
+                                                                                animate-[bounce_6.5s_ease-in-out_infinite]">
+                                                                        <img src="/assets/images/root/hero-primary-content-element-2.png" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="content-image
+                                                                            absolute
+                                                                            hidden md:block
+                                                                            z-10
+                                                                            w-[calc((575*var(--multiplier))/var(--vw))]
+                                                                            bottom-[calc((150*var(--multiplier))/var(--vw))]
+                                                                            right-[calc((185*var(--multiplier))/var(--vw))]">
+                                                                    <div class="image">
+                                                                        <img src="/assets/images/root/hero-primary-content-image-1.png" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="content-background
+                                                                            relative lg:absolute
+                                                                            w-[calc((450*var(--multiplier))/var(--vw))] md:w-[calc((800*var(--multiplier))/var(--vw))]
+                                                                            mb-minus-custom-15 md:mb-0
+                                                                            bottom-[calc((-25*var(--multiplier))/var(--vw))] md:bottom-[calc((-150*var(--multiplier))/var(--vw))] lg:bottom-[calc((-250*var(--multiplier))/var(--vw))]
+                                                                            right-[calc((-25*var(--multiplier))/var(--vw))] md:right-[calc((-100*var(--multiplier))/var(--vw))]">
+                                                                    <div class="background">
+                                                                        <img class="hidden md:block" src="/assets/images/root/hero-primary-content-background-1.png" >
+                                                                        <img class="block md:hidden" src="/assets/images/root/hero-primary-content-background-2.png" >
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -601,7 +571,7 @@
                                     <div class="logo-marquee-content
                                                 marquee-fade-horizontal
                                                 overflow-hidden
-                                                w-[calc((800*var(--multiplier))/var(--vw))] lg:w-[calc((1200*var(--multiplier))/var(--vw))]
+                                                w-[calc((400*var(--multiplier))/var(--vw))] md:w-[calc((800*var(--multiplier))/var(--vw))] lg:w-[calc((1200*var(--multiplier))/var(--vw))]
                                                 h-[calc((125*var(--multiplier))/var(--vw))]
                                                 mx-auto">
                                         <div class="content-marquee">
@@ -2527,7 +2497,7 @@
                                                                     <div class="caption">
                                                                         <span class="text-white">
                                                                             <span class="flex items-center
-                                                                                         justify-center
+                                                                                         justify-center lg:justify-normal
                                                                                          mb-custom-2">
                                                                                 <span class="flex items-center">
                                                                                     <span class="inline-block
@@ -2620,7 +2590,7 @@
                                                                     <div class="caption">
                                                                         <span class="text-white">
                                                                             <span class="flex items-center
-                                                                                         justify-center
+                                                                                         justify-center lg:justify-normal
                                                                                          mb-custom-2">
                                                                                 <span class="flex items-center">
                                                                                     <span class="inline-block
@@ -2713,7 +2683,7 @@
                                                                     <div class="caption">
                                                                         <span class="text-white">
                                                                             <span class="flex items-center
-                                                                                         justify-center
+                                                                                         justify-center lg:justify-normal
                                                                                          mb-custom-2">
                                                                                 <span class="flex items-center">
                                                                                     <span class="inline-block
