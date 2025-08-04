@@ -8,4 +8,17 @@
     .container {
         @apply py-custom-10;
     }
+
+    @media (max-width: 1080px) {
+        .container {
+            @apply py-custom-9;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            @apply py-custom-8;
+        }
+    }
 }
+

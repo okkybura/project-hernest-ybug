@@ -14,49 +14,14 @@ module.exports = {
         padding: '1rem',
       },
 
-      spacing: {
-        'custom-gap-1': 'calc(5 / 1600 * 100vw)',
-        'custom-gap-2': 'calc(10 / 1600 * 100vw)',
-        'custom-gap-3': 'calc(15 / 1600 * 100vw)',
-        'custom-gap-4': 'calc(25 / 1600 * 100vw)',
-        'custom-gap-5': 'calc(30 / 1600 * 100vw)',
-        'custom-gap-6': 'calc(35 / 1600 * 100vw)',
-      },
-
       height: {
         screen: "100vh",
-      },
-      margin: {
-        'custom-1': 'calc(5 / 1600 * 100vw)',
-        'custom-2': 'calc(10 / 1600 * 100vw)',
-        'custom-3': 'calc(15 / 1600 * 100vw)',
-        'custom-4': 'calc(25 / 1600 * 100vw)',
-        'custom-5': 'calc(30 / 1600 * 100vw)',
-        'custom-6': 'calc(35 / 1600 * 100vw)',
-        'custom-7': 'calc(40 / 1600 * 100vw)',
-        'custom-8': 'calc(45 / 1600 * 100vw)',
-        'custom-9': 'calc(50 / 1600 * 100vw)',
-        'custom-10': 'calc(100 / 1600 * 100vw)',
-        'custom-15': 'calc(150 / 1600 * 100vw)',
       },
 
       fontFamily: {
         dmSans: ['DM Sans', 'sans-serif'],
       },
-      fontSize: {
-        'size-custom-d1': ['calc(55 / 1600 * 100vw)'],
-        'size-custom-d2': ['calc(55 / 1600 * 100vw)'],
-        'size-custom-d3': ['calc(55 / 1600 * 100vw)'],
-        'size-custom-d4': ['calc(55 / 1600 * 100vw)'],
 
-        'size-custom-h1': ['calc(48 / 1600 * 100vw)'],
-        'size-custom-h2': ['calc(36 / 1600 * 100vw)'],
-        'size-custom-h3': ['calc(28 / 1600 * 100vw)'],
-        'size-custom-h4': ['calc(24 / 1600 * 100vw)'],
-        'size-custom-h5': ['calc(21 / 1600 * 100vw)'],
-        'size-custom-h6': ['calc(17 / 1600 * 100vw)'],
-      },
-      
       colors: {
         primary: '#4444DD',
         secondary: '#595CFF',

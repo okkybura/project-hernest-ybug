@@ -90,34 +90,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 });
 
-
-
 /* -------------------- Flickty Setting -------------------- */
 
-document.querySelectorAll('.carousel').forEach(function (carouselElem) {
-    var flkty = new Flickity(carouselElem, {
-        imagesLoaded: true,
-        percentPosition: false,
-        freeScroll: true,
-        contain: true,
-        prevNextButtons: false,
-        pageDots: false
-    });
+  window.addEventListener('DOMContentLoaded', function () {
+    var groupCellsValue = window.innerWidth >= 1024 ? 2 : false;
 
-    var imgs = carouselElem.querySelectorAll('.carousel-cell img');
-    var docStyle = document.documentElement.style;
-    var transformProp = typeof docStyle.transform === 'string' ? 'transform' : 'WebkitTransform';
-
-    flkty.on('scroll', function () {
-        flkty.slides.forEach(function (slide, i) {
-            var img = imgs[i];
-            if (img) {
-                var x = (slide.target + flkty.x) * -1 / 5;
-                img.style[transformProp] = 'translateX(' + x + 'px)';
-            }
-        });
+    var flkty = new Flickity('.carousel-double', {
+      wrapAround: false,
+      groupCells: groupCellsValue,
+      cellAlign: 'left',
+      draggable: true,
+      freeScroll: true
     });
-});
+  });
 
 /* -------------------- Custom Split Text Setting -------------------- */
 
