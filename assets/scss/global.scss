@@ -33,7 +33,27 @@
     --cubic-bezier-1                    : cubic-bezier(0.625, 0.05, 0, 1);
 }
 
-@media (max-width: 1080px) {
+.container {
+    max-width                           : 90% !important; 
+}
+
+@media (min-width: 2000px) {
+    :root {
+        --vw: 1800;
+    }
+
+    .container {
+        max-width                       : 1440px !important;
+    }
+}
+
+@media (min-width: 2250px) {
+    :root {
+        --vw: 2500;
+    }
+}
+
+@media (max-width: 900px) {
     :root {
         --vw: 900;
     }
@@ -71,11 +91,6 @@ a, button {
 
 a:not(.btn):hover {
     @apply text-color-custom-primary;
-}
-
-.container {
-    max-width                           : 90% !important; 
-
 }
 
 svg {

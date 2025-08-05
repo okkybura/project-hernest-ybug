@@ -19,38 +19,10 @@ window.addEventListener('wheel', function (e) {
 //    }
 //});
 
-/* -------------------- Cursor Setting -------------------- */
-
-const cursorDefault = new MouseFollower({
-    skewing: 1,
-    speed: 0.5,
-    visible: false,
-});
-
-const targets = document.querySelectorAll('[data-cursor]');
-
-targets.forEach(target => {
-    target.addEventListener('mouseenter', () => {
-        cursorDefault.show();
-    });
-
-    target.addEventListener('mouseleave', () => {
-        cursorDefault.hide();
-    });
-});
-
 /* -------------------- GSAP Setting -------------------- */
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(Observer, ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
-
-    // Scroll Smoother
-
-    ScrollSmoother.create({
-        smooth: 1,
-        effects: true,
-        smoothTouch: 0.5,
-    });
+    gsap.registerPlugin(SplitText);
 
     document.querySelectorAll(".text-mask").forEach((el) => {
         const splitText = SplitText.create(el, {
@@ -88,21 +60,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
     });
+
+    gsap.set(".logo-marquee.primary .logo-marquee-content .content-marquee .marquee-image .image", {
+        x: (i) => i * 200
+    });
+
+    gsap.to(".logo-marquee.primary .logo-marquee-content .content-marquee .marquee-image .image", {
+        duration: 50,
+        ease: "none",
+        x: "-=1200",
+        modifiers: {
+            x: gsap.utils.unitize(x => (parseFloat(x) + 1200) % 1200)
+        },
+        repeat: -1
+    });
 });
 
 /* -------------------- Flickty Setting -------------------- */
 
-  window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
     var groupCellsValue = window.innerWidth >= 1024 ? 2 : false;
 
     var flkty = new Flickity('.carousel-double', {
-      wrapAround: false,
-      groupCells: groupCellsValue,
-      cellAlign: 'left',
-      draggable: true,
-      freeScroll: true
+        wrapAround: false,
+        groupCells: groupCellsValue,
+        cellAlign: 'left',
+        draggable: true,
+        freeScroll: true
     });
-  });
+});
 
 /* -------------------- Custom Split Text Setting -------------------- */
 
@@ -190,11 +176,4 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
         }
     });
-});
-
-/* -------------------- Navbar Setting -------------------- */
-
-$(window).scroll(function () {
-    $(".navbar").toggleClass("scroll", $(this).scrollTop() > 1)
-    $("#scroll-top").toggleClass("scroll", $(this).scrollTop() > 1)
 });

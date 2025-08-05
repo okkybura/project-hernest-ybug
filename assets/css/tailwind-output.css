@@ -23,7 +23,27 @@
   --cubic-bezier-1: cubic-bezier(0.625, 0.05, 0, 1);
 }
 
-@media (max-width: 1080px) {
+.container {
+  max-width: 90% !important;
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --vw: 1800;
+  }
+
+  .container {
+    max-width: 1440px !important;
+  }
+}
+
+@media (min-width: 2250px) {
+  :root {
+    --vw: 2500;
+  }
+}
+
+@media (max-width: 900px) {
   :root {
     --vw: 900;
   }
@@ -60,10 +80,6 @@ a:before, a:after, button:before, button:after {
 a:not(.btn):hover{
   --tw-text-opacity: 1;
   color: rgb(68 68 221 / var(--tw-text-opacity, 1));
-}
-
-.container {
-  max-width: 90% !important;
 }
 
 svg {
@@ -1541,15 +1557,27 @@ video {
   }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1200px){
   .container{
-    max-width: 1280px;
+    max-width: 1200px;
   }
 }
 
 @media (min-width: 1536px){
   .container{
     max-width: 1536px;
+  }
+}
+
+@media (min-width: 1700px){
+  .container{
+    max-width: 1700px;
+  }
+}
+
+@media (min-width: 1900px){
+  .container{
+    max-width: 1900px;
   }
 }
 
@@ -1588,16 +1616,20 @@ video {
   bottom: -50%;
 }
 
-.bottom-\[calc\(\(-175\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((-175 * var(--multiplier)) / var(--vw));
+.bottom-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  bottom: calc((-25 * var(--multiplier)) / var(--vw));
 }
 
 .bottom-\[calc\(\(-60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   bottom: calc((-60 * var(--multiplier)) / var(--vw));
 }
 
-.bottom-\[calc\(\(150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((150 * var(--multiplier)) / var(--vw));
+.bottom-\[calc\(\(175\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  bottom: calc((175 * var(--multiplier)) / var(--vw));
+}
+
+.bottom-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  bottom: calc((25 * var(--multiplier)) / var(--vw));
 }
 
 .bottom-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
@@ -1624,16 +1656,20 @@ video {
   left: calc((-200 * var(--multiplier)) / var(--vw));
 }
 
+.left-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  left: calc((-25 * var(--multiplier)) / var(--vw));
+}
+
 .right-0{
   right: 0px;
 }
 
-.right-\[calc\(\(-100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((-100 * var(--multiplier)) / var(--vw));
-}
-
 .right-\[calc\(\(-150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   right: calc((-150 * var(--multiplier)) / var(--vw));
+}
+
+.right-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  right: calc((-25 * var(--multiplier)) / var(--vw));
 }
 
 .right-\[calc\(\(-250\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
@@ -1654,62 +1690,6 @@ video {
 
 .top-\[unset\]{
   top: unset;
-}
-
-.bottom-\[calc\(\(-225\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((-225 * var(--multiplier)) / var(--vw));
-}
-
-.bottom-\[calc\(\(-250\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((-250 * var(--multiplier)) / var(--vw));
-}
-
-.bottom-\[calc\(\(-150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((-150 * var(--multiplier)) / var(--vw));
-}
-
-.bottom-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((-25 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((-25 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(0\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((0 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(-50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((-50 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((50 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(-15\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((-15 * var(--multiplier)) / var(--vw));
-}
-
-.right-\[calc\(\(10\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  right: calc((10 * var(--multiplier)) / var(--vw));
-}
-
-.bottom-\[calc\(\(0\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((0 * var(--multiplier)) / var(--vw));
-}
-
-.bottom-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  bottom: calc((25 * var(--multiplier)) / var(--vw));
-}
-
-.left-\[calc\(\(-35\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  left: calc((-35 * var(--multiplier)) / var(--vw));
-}
-
-.left-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  left: calc((-25 * var(--multiplier)) / var(--vw));
 }
 
 .z-10{
@@ -1905,6 +1885,10 @@ video {
   width: calc((125 * var(--multiplier)) / var(--vw));
 }
 
+.w-\[calc\(\(150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((150 * var(--multiplier)) / var(--vw));
+}
+
 .w-\[calc\(\(1650\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   width: calc((1650 * var(--multiplier)) / var(--vw));
 }
@@ -1921,6 +1905,14 @@ video {
   width: calc((32.5 * var(--multiplier)) / var(--vw));
 }
 
+.w-\[calc\(\(400\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((400 * var(--multiplier)) / var(--vw));
+}
+
+.w-\[calc\(\(450\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  width: calc((450 * var(--multiplier)) / var(--vw));
+}
+
 .w-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   width: calc((50 * var(--multiplier)) / var(--vw));
 }
@@ -1933,10 +1925,6 @@ video {
   width: calc((575 * var(--multiplier)) / var(--vw));
 }
 
-.w-\[calc\(\(800\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  width: calc((800 * var(--multiplier)) / var(--vw));
-}
-
 .w-\[calc\(\(850\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
   width: calc((850 * var(--multiplier)) / var(--vw));
 }
@@ -1947,22 +1935,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-\[calc\(\(400\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  width: calc((400 * var(--multiplier)) / var(--vw));
-}
-
-.w-\[calc\(\(500\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  width: calc((500 * var(--multiplier)) / var(--vw));
-}
-
-.w-\[calc\(\(450\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  width: calc((450 * var(--multiplier)) / var(--vw));
-}
-
-.w-\[calc\(\(150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-  width: calc((150 * var(--multiplier)) / var(--vw));
 }
 
 .max-w-\[calc\(\(1100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
@@ -2414,10 +2386,6 @@ video {
   font-size: calc(12 / var(--vw) * var(--multiplier));
 }
 
-.p-custom-1 {
-  padding: calc(5 / var(--vw) * var(--multiplier));
-}
-
 .p-custom-2 {
   padding: calc(10 / var(--vw) * var(--multiplier));
 }
@@ -2444,6 +2412,10 @@ video {
 
 .pt-custom-5 {
   padding-top: calc(30 / var(--vw) * var(--multiplier));
+}
+
+.pb-custom-3 {
+  padding-bottom: calc(15 / var(--vw) * var(--multiplier));
 }
 
 .pb-custom-9 {
@@ -2561,10 +2533,6 @@ video {
   margin-right: calc(15 / var(--vw) * var(--multiplier));
 }
 
-.mb-minus-custom-10 {
-  margin-bottom: calc(-100 / var(--vw) * var(--multiplier));
-}
-
 .mb-minus-custom-15 {
   margin-bottom: calc(-150 / var(--vw) * var(--multiplier));
 }
@@ -2629,8 +2597,20 @@ video {
     bottom: 0px;
   }
 
+  .md\:bottom-\[calc\(\(-150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((-150 * var(--multiplier)) / var(--vw));
+  }
+
+  .md\:bottom-\[calc\(\(-85\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((-85 * var(--multiplier)) / var(--vw));
+  }
+
   .md\:bottom-\[unset\]{
     bottom: unset;
+  }
+
+  .md\:left-0{
+    left: 0px;
   }
 
   .md\:left-\[50\%\]{
@@ -2645,6 +2625,10 @@ video {
     right: 0px;
   }
 
+  .md\:right-\[calc\(\(-100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((-100 * var(--multiplier)) / var(--vw));
+  }
+
   .md\:right-\[calc\(\(-30\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     right: calc((-30 * var(--multiplier)) / var(--vw));
   }
@@ -2657,48 +2641,40 @@ video {
     top: 50%;
   }
 
-  .md\:bottom-\[calc\(\(-500\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-500 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:bottom-\[calc\(\(-250\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-250 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:bottom-\[calc\(\(-150\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-150 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:bottom-\[calc\(\(-100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-100 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:bottom-\[calc\(\(-85\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-85 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:top-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    top: calc((50 * var(--multiplier)) / var(--vw));
-  }
-
-  .md\:top-\[calc\(\(100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    top: calc((100 * var(--multiplier)) / var(--vw));
-  }
-
   .md\:top-\[calc\(\(125\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     top: calc((125 * var(--multiplier)) / var(--vw));
   }
 
-  .md\:right-\[calc\(\(-100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    right: calc((-100 * var(--multiplier)) / var(--vw));
+  .md\:bottom-\[5\%\]{
+    bottom: 5%;
   }
 
-  .md\:left-\[calc\(\(700\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    left: calc((700 * var(--multiplier)) / var(--vw));
+  .md\:bottom-\[10\%\]{
+    bottom: 10%;
   }
 
-  .md\:left-0{
-    left: 0px;
+  .md\:bottom-\[20\%\]{
+    bottom: 20%;
+  }
+
+  .md\:bottom-\[30\%\]{
+    bottom: 30%;
+  }
+
+  .md\:bottom-\[calc\(\(125\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((125 * var(--multiplier)) / var(--vw));
+  }
+
+  .md\:bottom-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((50 * var(--multiplier)) / var(--vw));
+  }
+
+  .md\:bottom-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((25 * var(--multiplier)) / var(--vw));
+  }
+
+  .md\:bottom-\[calc\(\(27\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((27.5 * var(--multiplier)) / var(--vw));
   }
 
   .md\:col-span-12{
@@ -2745,12 +2721,12 @@ video {
     margin-top: calc(calc((125 * var(--multiplier)) / var(--vw)) * -1);
   }
 
-  .md\:mt-\[calc\(\(75\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    margin-top: calc((75 * var(--multiplier)) / var(--vw));
-  }
-
   .md\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .md\:mt-\[calc\(\(75\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    margin-top: calc((75 * var(--multiplier)) / var(--vw));
   }
 
   .md\:block{
@@ -2777,16 +2753,16 @@ video {
     width: 96.5%;
   }
 
-  .md\:w-full{
-    width: 100%;
+  .md\:w-\[calc\(\(200\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    width: calc((200 * var(--multiplier)) / var(--vw));
   }
 
   .md\:w-\[calc\(\(800\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     width: calc((800 * var(--multiplier)) / var(--vw));
   }
 
-  .md\:w-\[calc\(\(200\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    width: calc((200 * var(--multiplier)) / var(--vw));
+  .md\:w-full{
+    width: 100%;
   }
 
   .md\:max-w-\[75\%\]{
@@ -2923,165 +2899,280 @@ video {
   .md\:mr-custom-4 {
     margin-right: calc(25 / var(--vw) * var(--multiplier));
   }
-
-  .md\:mb-minus-custom-10 {
-    margin-bottom: calc(-100 / var(--vw) * var(--multiplier));
-  }
 }
 
 @media (min-width: 1024px){
-  .lg\:static{
-    position: static;
+  .lg\:bottom-\[calc\(\(0\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((0 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:absolute{
-    position: absolute;
+  .lg\:bottom-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((25 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:bottom-\[calc\(\(-75\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-75 * var(--multiplier)) / var(--vw));
+  .lg\:left-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    left: calc((25 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:left-\[calc\(\(700\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    left: calc((700 * var(--multiplier)) / var(--vw));
+  .lg\:right-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((50 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:top-\[calc\(\(-25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    top: calc((-25 * var(--multiplier)) / var(--vw));
+  .lg\:bottom-\[calc\(\(300\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((300 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:bottom-\[calc\(\(-250\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
-    bottom: calc((-250 * var(--multiplier)) / var(--vw));
+  .lg\:bottom-\[calc\(\(250\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((250 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:col-span-3{
-    grid-column: span 3 / span 3;
+  .lg\:top-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    top: calc((50 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:col-span-5{
-    grid-column: span 5 / span 5;
+  .lg\:top-\[calc\(\(25\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    top: calc((25 * var(--multiplier)) / var(--vw));
+  }
+
+  .lg\:right-\[calc\(\(-100\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((-100 * var(--multiplier)) / var(--vw));
+  }
+
+  .lg\:top-0{
+    top: 0px;
   }
 
   .lg\:col-span-6{
     grid-column: span 6 / span 6;
   }
 
-  .lg\:col-start-8{
-    grid-column-start: 8;
+  .lg\:col-span-3{
+    grid-column: span 3 / span 3;
   }
 
-  .lg\:col-start-9{
-    grid-column-start: 9;
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .lg\:mx-0{
-    margin-left: 0px;
-    margin-right: 0px;
+  .lg\:my-auto{
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .lg\:block{
     display: block;
   }
 
+  .lg\:flex{
+    display: flex;
+  }
+
   .lg\:hidden{
     display: none;
   }
 
-  .lg\:h-10{
+  .lg\:max-w-\[calc\(\(300\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    max-width: calc((300 * var(--multiplier)) / var(--vw));
+  }
+
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px){
+  .xl\:absolute{
+    position: absolute;
+  }
+
+  .xl\:bottom-\[calc\(\(-175\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((-175 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:bottom-\[calc\(\(-275\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((-275 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:bottom-\[calc\(\(50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    bottom: calc((50 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:left-\[calc\(\(-50\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    left: calc((-50 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:right-\[calc\(\(-225\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((-225 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:right-\[calc\(\(-300\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((-300 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:right-\[calc\(\(0\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((0 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:top-\[calc\(\(-75\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    top: calc((-75 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:col-span-3{
+    grid-column: span 3 / span 3;
+  }
+
+  .xl\:col-span-5{
+    grid-column: span 5 / span 5;
+  }
+
+  .xl\:col-span-6{
+    grid-column: span 6 / span 6;
+  }
+
+  .xl\:col-start-8{
+    grid-column-start: 8;
+  }
+
+  .xl\:col-start-9{
+    grid-column-start: 9;
+  }
+
+  .xl\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .xl\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .xl\:block{
+    display: block;
+  }
+
+  .xl\:hidden{
+    display: none;
+  }
+
+  .xl\:h-10{
     height: 2.5rem;
   }
 
-  .lg\:h-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:h-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     height: calc((37.5 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:h-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:h-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     height: calc((60 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:h-full{
+  .xl\:h-\[calc\(\(800\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    height: calc((800 * var(--multiplier)) / var(--vw));
+  }
+
+  .xl\:h-full{
     height: 100%;
   }
 
-  .lg\:h-screen{
-    height: 100vh;
-  }
-
-  .lg\:w-10{
+  .xl\:w-10{
     width: 2.5rem;
   }
 
-  .lg\:w-\[50\%\]{
+  .xl\:w-\[50\%\]{
     width: 50%;
   }
 
-  .lg\:w-\[calc\(\(1200\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:w-\[calc\(\(1200\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     width: calc((1200 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:w-\[calc\(\(175\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:w-\[calc\(\(175\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     width: calc((175 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:w-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:w-\[calc\(\(37\.5\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     width: calc((37.5 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:w-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+  .xl\:w-\[calc\(\(60\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
     width: calc((60 * var(--multiplier)) / var(--vw));
   }
 
-  .lg\:max-w-\[50\%\]{
+  .xl\:max-w-\[50\%\]{
     max-width: 50%;
   }
 
-  .lg\:justify-normal{
+  .xl\:max-w-full{
+    max-width: 100%;
+  }
+
+  .xl\:justify-normal{
     justify-content: normal;
   }
 
-  .lg\:pb-0{
+  .xl\:pb-0{
     padding-bottom: 0px;
   }
 
-  .lg\:text-left{
+  .xl\:text-left{
     text-align: left;
   }
 
-  .lg\:text-size-custom-d4 {
+  .xl\:text-size-custom-d4 {
     font-size: calc(55 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:text-size-custom-p {
+  .xl\:text-size-custom-p {
     font-size: calc(16 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:p-custom-7 {
+  .xl\:p-custom-7 {
     padding: calc(40 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:p-custom-10 {
+  .xl\:p-custom-10 {
     padding: calc(100 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:p-custom-15 {
+  .xl\:p-custom-15 {
     padding: calc(150 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:pb-custom-6 {
+  .xl\:pb-custom-6 {
     padding-bottom: calc(35 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:py-custom-9 {
+  .xl\:py-custom-9 {
     padding-top: calc(50 / var(--vw) * var(--multiplier));
     padding-bottom: calc(50 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:mb-custom-5 {
+  .xl\:mb-custom-5 {
     margin-bottom: calc(30 / var(--vw) * var(--multiplier));
   }
 
-  .lg\:mr-custom-5 {
+  .xl\:mr-custom-5 {
     margin-right: calc(30 / var(--vw) * var(--multiplier));
+  }
+}
+
+@media (min-width: 1700px){
+  .\33xl\:relative{
+    position: relative;
+  }
+
+  .\33xl\:left-\[calc\(\(-85\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    left: calc((-85 * var(--multiplier)) / var(--vw));
+  }
+
+  .\33xl\:right-\[calc\(\(-225\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((-225 * var(--multiplier)) / var(--vw));
+  }
+
+  .\33xl\:right-\[calc\(\(75\*var\(--multiplier\)\)\/var\(--vw\)\)\]{
+    right: calc((75 * var(--multiplier)) / var(--vw));
   }
 }
 
