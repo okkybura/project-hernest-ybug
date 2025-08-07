@@ -31,6 +31,22 @@ module.exports = {
         dmSans: ['DM Sans', 'sans-serif'],
       },
 
+      fontSize: {
+        'xs': '12px',
+        'sm': '14px',
+        'base': '16px',
+        'lg': '17px',
+        'xl': '21px',
+        '2xl': '27px',
+        '3xl': '30px',
+        '4xl': '36px',
+        '5xl': '48px',
+        '6xl': '54px',
+        '7xl': '72px',
+        '8xl': '96px',
+        '9xl': '128px',
+      },
+
       colors: {
         primary: '#4444DD',
         secondary: '#595CFF',

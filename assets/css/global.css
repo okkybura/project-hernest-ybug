@@ -1119,8 +1119,8 @@ svg {
 }
 
 .btn-solid {
+  @apply px-custom-5 !important;
   @apply rounded-custom-md;
-  width: calc(225 / var(--vw) * var(--multiplier));
   padding: calc(17.5 / var(--vw) * var(--multiplier)) calc(20 / var(--vw) * var(--multiplier));
 }
 .btn-solid:before {
