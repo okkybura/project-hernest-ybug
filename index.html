@@ -43,7 +43,8 @@
 
                         <!--Wizard-->
 
-                        <div class="wizard">
+                        <div class="wizard
+                                    overflow-hidden">
 
                             <!-- Navbar - Primary -->
 
@@ -752,7 +753,8 @@
                                                 mb-custom-4">
                                         <div class="header-text">
                                             <div class="subtitle">
-                                                <h4 class="text-subtitle-primary text-size-custom-h3">
+                                                <h4 class="text-subtitle-primary
+                                                           text-3xl">
                                                     Trusted by 1,000+ teams worldwide
                                                 </h4>
                                             </div>
@@ -877,7 +879,7 @@
                                                     <div class="title
                                                                 mb-custom-5 md:mb-custom-4 xl:mb-custom-5">
                                                         <h2 class="text-title-primary
-                                                                   text-size-custom-h2 xl:text-size-custom-d4
+                                                                   text-3xl md:text-4xl xl:text-5xl
                                                                    font-bold">
                                                             <span>Get more done</span> with
                                                             <br class="hidden xl:block" />
@@ -885,8 +887,9 @@
                                                         </h2>
                                                     </div>
                                                     <div class="subtitle">
-                                                        <h4 class="text-subtitle-primary text-size-custom-h5
-                                                                text-black text-opacity-65">
+                                                        <h4 class="text-subtitle-primary
+                                                                   text-xl
+                                                                 text-black text-opacity-65">
                                                             Designed to keep things clear, fast, and on point.
                                                         </h4>
                                                     </div>
@@ -899,7 +902,7 @@
                                                         mt-custom-9
                                                         mb-custom-10">
                                                 <div class="col-content-outer grid grid-cols-12 gap-custom-gap-5">
-                                                    <div class="col-content-inner col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6">
+                                                    <div class="col-content-inner col-span-12 md:col-span-12 xl:col-span-6">
                                                         <div class="content-wrappper primary
                                                                     h-full">
                                                             <div class="wrapper-inner
@@ -907,39 +910,41 @@
                                                                         overflow-hidden
                                                                         flex
                                                                         flex-col
-                                                                        h-[calc((450*var(--multiplier))/var(--vw))] md:h-[calc((500*var(--multiplier))/var(--vw))] xl:h-full
-                                                                        p-custom-7
+                                                                        h-full
+                                                                        p-custom-6
+                                                                        md:!pr-0
                                                                       bg-black
                                                                         rounded-custom-lg">
-                                                                <div class="content-image
-                                                                            absolute
-                                                                            w-[calc((550*var(--multiplier))/var(--vw))] md:w-full md:max-w-[93.5%]
-                                                                            top-[55%] md:top-[50%]
-                                                                            right-[calc((-250*var(--multiplier))/var(--vw))] md:right-0
-                                                                            -translate-y-[1/2]">
-                                                                    <div class="image">
-                                                                        <img class="block"
-                                                                            src="/assets/images/root/feature-list-primary-content-image-1.png" />
-                                                                    </div>
-                                                                </div>
                                                                 <div class="content-text
                                                                             z-10
-                                                                            max-w-[calc((400*var(--multiplier))/var(--vw))]
-                                                                            mb-custom-4">
+                                                                            max-w-full md:max-w-[75%] lg:max-w-full xl:max-w-[75%]">
                                                                     <div class="title
                                                                                 mb-custom-4">
                                                                         <h3 class="text-title-primary
-                                                                                   text-size-custom-h3 md:text-size-custom-h2
+                                                                                   text-2xl lg:text-xl xl:text-4xl
                                                                                    font-bold
                                                                                    text-white">
                                                                             Effortless visual feedback
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-h6
-                                                                                  text-white">
+                                                                        <p class="text-description-primary
+                                                                                  text-base lg:text-lg xl:text-xl
+                                                                                text-white">
                                                                             Let users submit annotated screenshots and comments directly from your site.
                                                                         </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="content-image
+                                                                            relative xl:absolute
+                                                                            w-[500px] md:w-full xl:w-[93.5%]
+                                                                            my-custom-5
+                                                                            xl:top-[47.5%]
+                                                                            xl:right-0
+                                                                            xl:-translate-y-[1/2]">
+                                                                    <div class="image">
+                                                                        <img class="block"
+                                                                            src="/assets/images/root/feature-list-primary-content-image-1.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="content-button
@@ -947,10 +952,7 @@
                                                                             mt-auto">
                                                                     <div class="button">
                                                                         <a class="btn btn-block btn-default btn-solid light
-                                                                                  !inline-block
-                                                                                  !w-auto
-                                                                                  px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -963,37 +965,38 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-content-inner col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
+                                                    <div class="col-content-inner col-span-12 md:col-span-6 xl:col-span-3">
                                                         <div class="content-wrappper primary">
                                                             <div class="wrapper-inner
                                                                         relative
                                                                         flex
                                                                         flex-col
                                                                         h-full
-                                                                        p-custom-7
-                                                                        pt-custom-5
+                                                                        p-custom-5
                                                                       bg-secondary
                                                                         rounded-custom-lg">
                                                                 <div class="content-text">
                                                                     <div class="title
                                                                                 mb-custom-3">
-                                                                        <h3 class="text-title-primary text-size-custom-h3
+                                                                        <h3 class="text-title-primary
+                                                                                   text-2xl lg:text-xl xl:text-2xl
                                                                                    font-bold
                                                                                    text-white">
                                                                             Plug-and-play setup
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-p
-                                                                                  text-white">
+                                                                        <p class="text-description-primary
+                                                                                  text-base xl:text-lg
+                                                                                text-white">
                                                                             Add Ybug to your site in under 5 minutes – no coding required. Just drop in a snippet or use the browser extension.
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                                 <div class="content-image
-                                                                            lg:max-w-[calc((300*var(--multiplier))/var(--vw))] xl:max-w-full
-                                                                            mt-auto
-                                                                            mb-custom-5
+                                                                            lg:w-[250px] xl:w-full
+                                                                            mt-custom-5
+                                                                            mb-auto
                                                                             lg:mx-auto">
                                                                     <div class="image">
                                                                         <img src="/assets/images/root/feature-list-primary-content-image-2.png" />
@@ -1002,10 +1005,7 @@
                                                                 <div class="content-button">
                                                                     <div class="button">
                                                                         <a class="btn btn-block btn-default btn-solid light
-                                                                                  !inline-block
-                                                                                  !w-auto
-                                                                                  px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -1018,7 +1018,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-content-inner col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
+                                                    <div class="col-content-inner col-span-12 md:col-span-6 xl:col-span-3">
                                                         <div class="content-wrappper primary
                                                                     h-full">
                                                             <div class="wrapper-inner
@@ -1026,27 +1026,29 @@
                                                                         flex
                                                                         flex-col
                                                                         h-full
-                                                                        p-custom-7
+                                                                        p-custom-5
                                                                       bg-white
                                                                         rounded-custom-lg">
                                                                 <div class="content-text">
                                                                     <div class="title
                                                                                 mb-custom-3">
-                                                                        <h3 class="text-title-primary text-size-custom-h3
+                                                                        <h3 class="text-title-primary
+                                                                                   text-2xl lg:text-xl xl:text-2xl
                                                                                    font-bold">
                                                                             Designed for teams of all sizes
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-p">
+                                                                        <p class="text-description-primary
+                                                                                  text-base xl:text-lg">
                                                                             One tool that works just as well for freelancers, agencies, product teams, or startups.
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                                 <div class="content-image
-                                                                            lg:max-w-[calc((300*var(--multiplier))/var(--vw))] xl:max-w-full
-                                                                            mt-auto
-                                                                            mb-custom-7
+                                                                            lg:w-[250px] xl:w-full
+                                                                            mt-custom-5
+                                                                            mb-auto
                                                                             lg:mx-auto">
                                                                     <div class="image">
                                                                         <img src="/assets/images/root/feature-list-primary-content-image-3.png" />
@@ -1055,10 +1057,7 @@
                                                                 <div class="content-button">
                                                                     <div class="button">
                                                                         <a class="btn btn-block btn-default btn-solid quarter
-                                                                                  !inline-block
-                                                                                  !w-auto
-                                                                                  px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -1071,7 +1070,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-content-inner col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
+                                                    <div class="col-content-inner col-span-12 md:col-span-6 xl:col-span-3">
                                                         <div class="content-wrappper primary
                                                                     h-full">
                                                             <div class="wrapper-inner
@@ -1079,8 +1078,7 @@
                                                                         flex
                                                                         flex-col
                                                                         h-full
-                                                                        p-custom-7
-                                                                        pt-custom-5
+                                                                        p-custom-5
                                                                       bg-[#FFDE9E]
                                                                         rounded-custom-lg">
                                                                 <div class="content-image
@@ -1093,13 +1091,15 @@
                                                                             mb-custom-4">
                                                                     <div class="title
                                                                                 mb-custom-3">
-                                                                        <h3 class="text-title-primary text-size-custom-h3
+                                                                        <h3 class="text-title-primary
+                                                                                   text-2xl lg:text-xl xl:text-2xl
                                                                                    font-bold">
                                                                             Full technical context with every report
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-p">
+                                                                        <p class="text-description-primary
+                                                                                  text-base xl:text-lg">
                                                                             Each submission includes browser, OS, screen size, URL, and console logs, so devs can reproduce issues without chasing details.
                                                                         </p>
                                                                     </div>
@@ -1108,10 +1108,7 @@
                                                                             mt-auto">
                                                                     <div class="button">
                                                                         <a class="btn btn-block btn-default btn-solid light
-                                                                                  !inline-block
-                                                                                  !w-auto
-                                                                                  px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -1124,7 +1121,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-content-inner col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-3">
+                                                    <div class="col-content-inner col-span-12 md:col-span-6 xl:col-span-3">
                                                         <div class="content-wrappper primary
                                                                     h-full">
                                                             <div class="wrapper-inner
@@ -1132,8 +1129,8 @@
                                                                         flex
                                                                         flex-col
                                                                         h-full
-                                                                        p-custom-7
-                                                                        pt-0
+                                                                        p-custom-5
+                                                                        !pt-0
                                                                       bg-white
                                                                         rounded-custom-lg">
                                                                 <div class="content-image
@@ -1146,13 +1143,15 @@
                                                                             mb-custom-4">
                                                                     <div class="title
                                                                                 mb-custom-3">
-                                                                        <h3 class="text-title-primary text-size-custom-h3
+                                                                        <h3 class="text-title-primary
+                                                                                   text-2xl lg:text-xl xl:text-2xl
                                                                                    font-bold">
                                                                             Built-in feedback replies and updates
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-p">
+                                                                        <p class="text-description-primary
+                                                                                  text-base xl:text-lg">
                                                                             Reply to submissions directly from the Ybug dashboard and automatically notify users when their input is received or resolved.
                                                                         </p>
                                                                     </div>
@@ -1161,10 +1160,7 @@
                                                                             mt-auto">
                                                                     <div class="button">
                                                                         <a class="btn btn-block btn-default btn-solid quarter
-                                                                                  !inline-block
-                                                                                  !w-auto
-                                                                                  px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -1177,7 +1173,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-content-inner col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6">
+                                                    <div class="col-content-inner col-span-12 md:col-span-12 xl:col-span-6">
                                                         <div class="content-wrappper primary
                                                                     h-full">
                                                             <div class="wrapper-inner
@@ -1186,7 +1182,7 @@
                                                                         flex
                                                                         flex-col
                                                                         h-[calc((575*var(--multiplier))/var(--vw))] md:h-[calc((500*var(--multiplier))/var(--vw))] xl:h-full
-                                                                        p-custom-7
+                                                                        p-custom-6
                                                                       bg-white
                                                                         rounded-custom-lg">
                                                                 <div class="content-image
@@ -1200,17 +1196,19 @@
                                                                 </div>
                                                                 <div class="content-text
                                                                             z-10
-                                                                            max-w-[calc((350*var(--multiplier))/var(--vw))]
+                                                                            max-w-full md:max-w-[85%] lg:max-w-full xl:max-w-[85%]
                                                                             mb-custom-4">
                                                                     <div class="title
                                                                                 mb-custom-3">
-                                                                        <h3 class="text-title-primary text-size-custom-h3
+                                                                        <h3 class="text-title-primary
+                                                                                   text-2xl lg:text-xl xl:text-4xl
                                                                                    font-bold">
                                                                             Works with your favourite tools
                                                                         </h3>
                                                                     </div>
                                                                     <div class="desc">
-                                                                        <p class="text-description-primary text-size-custom-h6">
+                                                                        <p class="text-description-primary
+                                                                                  text-base lg:text-lg xl:text-xl">
                                                                             Send feedback straight to Jira, Asana, Slack, ClickUp, GitHub, and more – right where your team already works.
                                                                         </p>
                                                                     </div>
@@ -1223,7 +1221,7 @@
                                                                                   !inline-block
                                                                                   !w-auto
                                                                                   px-custom-5
-                                                                                  !text-size-custom-h6
+                                                                                  !text-sm xl:!text-lg
                                                                                 !text-primary" href="#">
                                                                             <span class="wrapper">
                                                                                 <span class="text">
@@ -1247,21 +1245,24 @@
                                                             mb-custom-5">
                                                     <div class="title
                                                                 mb-custom-4">
-                                                        <h2 class="text-title-primary text-size-custom-h2
-                                                                font-bold">
+                                                        <h2 class="text-title-primary
+                                                                   text-3xl xl:text-4xl
+                                                                   font-bold">
                                                             Ready to collect clear, actionable feedback?
                                                         </h2>
                                                     </div>
                                                     <div class="subtitle">
-                                                        <h4 class="text-subtitle-primary text-size-custom-h5
-                                                                text-black text-opacity-65">
+                                                        <h4 class="text-subtitle-primary
+                                                                   text-xl
+                                                                 text-black text-opacity-65">
                                                             Designed to keep things clear, fast, and on point.
                                                         </h4>
                                                     </div>
                                                 </div>
                                                 <div class="footer-button">
                                                     <div class="button">
-                                                        <a class="btn btn-block btn-default btn-solid gradient-secondary" href="#">
+                                                        <a class="btn btn-block btn-default btn-solid gradient-secondary
+                                                                  !text-base lg:!text-lg xl:!text-xl" href="#">
                                                             <span class="wrapper">
                                                                 <span class="text">
                                                                     Start free trial
@@ -1272,7 +1273,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </section>
@@ -1291,14 +1291,14 @@
                                             <div class="title
                                                         mb-custom-4 xl:mb-custom-5">
                                                 <h2 class="text-title-primary
-                                                           text-size-custom-h2 xl:text-size-custom-d4
+                                                           text-3xl md:text-4xl xl:text-5xl
                                                            font-bold">
                                                     How <span>Ybug works</span>
                                                 </h2>
                                             </div>
                                             <div class="subtitle">
                                                 <h4 class="text-subtitle-primary
-                                                           text-size-custom-h5
+                                                           text-xl
                                                           text-black text-opacity-65">
                                                     No tutorials. No friction. Just fast, clear feedback.
                                                 </h4>
@@ -1311,7 +1311,7 @@
                                     <div class="how-it-work-content">
                                         <div class="col-content-outer grid grid-cols-12 gap-custom-gap-5">
                                             <div class="col-content-inner
-                                                        col-span-12 md:col-span-5 lg:col-span-3 md:col-start-2
+                                                        col-span-12 md:col-span-5 xl:col-span-3 md:col-start-2
                                                         mb-custom-9 md:mb-custom-0">
                                                 <div class="content-wrapper-primary
                                                             relative
@@ -1322,7 +1322,7 @@
                                                         <div class="element">
                                                             <span>
                                                                 <svg class="absolute
-                                                                            top-[unset] md:top-[45.5%] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
+                                                                            top-[unset] md:top-[106.5px] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
                                                                             left-[50%] md:left-[unset] right-0 md:right-[calc((-30*var(--multiplier))/var(--vw))]
                                                                             translate-x-[-50%] md:translate-x-0
                                                                             rotate-90 md:rotate-0
@@ -1340,7 +1340,7 @@
                                                                 mb-custom-3 md:mb-custom-4">
                                                         <div class="number">
                                                             <span class="text-number-primary
-                                                                         text-size-custom-d4 
+                                                                         text-6xl
                                                                          text-primary">
                                                                 1.
                                                             </span>
@@ -1361,7 +1361,7 @@
                                                     <div class="content-text">
                                                         <div class="desc">
                                                             <p class="text-description-primary
-                                                                      xl:text-size-custom-p md:text-size-custom-h6
+                                                                      text-base md:text-lg xl:text-[18px] 3xl:text-xl
                                                                       text-black text-opacity-65">
                                                                 Create an account - <b>no credit card needed.</b>
                                                             </p>
@@ -1370,7 +1370,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-content-inner
-                                                        col-span-12 md:col-span-5 lg:col-span-3
+                                                        col-span-12 md:col-span-5 xl:col-span-3
                                                         mb-custom-9 md:mb-custom-0">
                                                 <div class="content-wrapper-primary
                                                             relative
@@ -1381,61 +1381,7 @@
                                                         <div class="element">
                                                             <span>
                                                                 <svg class="absolute
-                                                                            top-[unset] md:top-[45.5%] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
-                                                                            left-[50%] md:left-[unset] right-0 md:right-[calc((-30*var(--multiplier))/var(--vw))]
-                                                                            translate-x-[-50%] md:translate-x-0
-                                                                            rotate-90 md:rotate-0
-                                                                            w-[calc((30*var(--multiplier))/var(--vw))]
-                                                                            h-[calc((30*var(--multiplier))/var(--vw))]"
-                                                                            viewBox="0 0 37 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M36.7071 8.70711C37.0976 8.31659 37.0976 7.68342 36.7071 7.2929L30.3431 0.928935C29.9526 0.53841 29.3195 0.53841 28.9289 0.928935C28.5384 1.31946 28.5384 1.95262 28.9289 2.34315L34.5858 8L28.9289 13.6569C28.5384 14.0474 28.5384 14.6805 28.9289 15.0711C29.3195 15.4616 29.9526 15.4616 30.3431 15.0711L36.7071 8.70711ZM0 8L-8.74228e-08 9L36 9L36 8L36 7L8.74228e-08 7L0 8Z"
-                                                                        fill="#595CFF" />
-                                                                </svg>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content-number
-                                                                mb-custom-3 md:mb-custom-4">
-                                                        <div class="number">
-                                                            <span class="text-number-primary
-                                                                         text-size-custom-d4 
-                                                                         text-primary">
-                                                                2.
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="content-text">
-                                                        <div class="subtitle
-                                                                    mb-custom-3">
-                                                            <h4 class="text-subtitle-primary text-size-custom-h5
-                                                                       font-bold">
-                                                                Add Ybug to your site
-                                                            </h4>
-                                                        </div>
-                                                        <div class="desc">
-                                                            <p class="text-description-primary
-                                                                      xl:text-size-custom-p md:text-size-custom-h6
-                                                                      text-black text-opacity-65">
-                                                                Copy one snippet of code or install our browser extension. Done in under 5 minutes.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-content-inner
-                                                        col-span-12 md:col-span-5 lg:col-span-3 md:col-start-2
-                                                        mb-custom-9 md:mb-custom-0">
-                                                <div class="content-wrapper-primary
-                                                            relative
-                                                            text-center md:text-left
-                                                            px-custom-4">
-                                                    <div class="content-element
-                                                                block md:hidden xl:block">
-                                                        <div class="element">
-                                                            <span>
-                                                                <svg class="absolute
-                                                                            top-[unset] md:top-[45.5%] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
+                                                                            top-[unset] md:top-[106.5px] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
                                                                             left-[50%] md:left-[unset] right-0 md:right-[calc((-30*var(--multiplier))/var(--vw))]
                                                                             translate-x-[-50%] md:translate-x-0
                                                                             rotate-90 md:rotate-0
@@ -1453,7 +1399,62 @@
                                                                 mb-custom-3 md:mb-custom-4">
                                                         <div class="number">
                                                             <span class="text-number-primary
-                                                                         text-size-custom-d4 
+                                                                         text-6xl
+                                                                         text-primary">
+                                                                2.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-text">
+                                                        <div class="subtitle
+                                                                    mb-custom-3">
+                                                            <h4 class="text-subtitle-primary
+                                                                       text-xl
+                                                                       font-bold">
+                                                                Add Ybug to your site
+                                                            </h4>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <p class="text-description-primary
+                                                                      text-base md:text-lg xl:text-[18px] 3xl:text-xl
+                                                                      text-black text-opacity-65">
+                                                                Copy one snippet of code or install our browser extension. Done in under 5 minutes.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-content-inner
+                                                        col-span-12 md:col-span-5 xl:col-span-3 md:col-start-2
+                                                        mb-custom-9 md:mb-custom-0">
+                                                <div class="content-wrapper-primary
+                                                            relative
+                                                            text-center md:text-left
+                                                            px-custom-4">
+                                                    <div class="content-element
+                                                                block md:hidden xl:block">
+                                                        <div class="element">
+                                                            <span>
+                                                                <svg class="absolute
+                                                                            top-[unset] md:top-[106.5px] bottom-[calc((-60*var(--multiplier))/var(--vw))] md:bottom-[unset]
+                                                                            left-[50%] md:left-[unset] right-0 md:right-[calc((-30*var(--multiplier))/var(--vw))]
+                                                                            translate-x-[-50%] md:translate-x-0
+                                                                            rotate-90 md:rotate-0
+                                                                            w-[calc((30*var(--multiplier))/var(--vw))]
+                                                                            h-[calc((30*var(--multiplier))/var(--vw))]"
+                                                                    viewBox="0 0 37 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M36.7071 8.70711C37.0976 8.31659 37.0976 7.68342 36.7071 7.2929L30.3431 0.928935C29.9526 0.53841 29.3195 0.53841 28.9289 0.928935C28.5384 1.31946 28.5384 1.95262 28.9289 2.34315L34.5858 8L28.9289 13.6569C28.5384 14.0474 28.5384 14.6805 28.9289 15.0711C29.3195 15.4616 29.9526 15.4616 30.3431 15.0711L36.7071 8.70711ZM0 8L-8.74228e-08 9L36 9L36 8L36 7L8.74228e-08 7L0 8Z"
+                                                                        fill="#595CFF" />
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-number
+                                                                mb-custom-3 md:mb-custom-4">
+                                                        <div class="number">
+                                                            <span class="text-number-primary
+                                                                         text-6xl
                                                                          text-primary">
                                                                 3.
                                                             </span>
@@ -1462,7 +1463,8 @@
                                                     <div class="content-text">
                                                         <div class="subtitle
                                                                     mb-custom-3">
-                                                            <h4 class="text-subtitle-primary text-size-custom-h5
+                                                            <h4 class="text-subtitle-primary
+                                                                       text-xl
                                                                        font-bold
                                                                        whitespace-nowrap">
                                                                 Capture visual feedback
@@ -1470,7 +1472,7 @@
                                                         </div>
                                                         <div class="desc">
                                                             <p class="text-description-primary
-                                                                      xl:text-size-custom-p md:text-size-custom-h6
+                                                                      text-base md:text-lg xl:text-[18px] 3xl:text-xl
                                                                       text-black text-opacity-65">
                                                                 Users report bugs with annotated screenshots, comments, and context.
                                                             </p>
@@ -1479,7 +1481,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-content-inner
-                                                        col-span-12 md:col-span-5 lg:col-span-3">
+                                                        col-span-12 md:col-span-5 xl:col-span-3">
                                                 <div class="content-wrapper-primary
                                                             relative
                                                             text-center md:text-left
@@ -1488,7 +1490,7 @@
                                                                 mb-custom-3 md:mb-custom-4">
                                                         <div class="number">
                                                             <span class="text-number-primary
-                                                                         text-size-custom-d4 
+                                                                         text-6xl
                                                                          text-primary">
                                                                 4.
                                                             </span>
@@ -1497,14 +1499,15 @@
                                                     <div class="content-text">
                                                         <div class="subtitle
                                                                     mb-custom-3">
-                                                            <h4 class="text-subtitle-primary text-size-custom-h5
+                                                            <h4 class="text-subtitle-primary
+                                                                       text-xl
                                                                        font-bold">
                                                                 Get complete reports
                                                             </h4>
                                                         </div>
                                                         <div class="desc">
                                                             <p class="text-description-primary
-                                                                    xl:text-size-custom-p md:text-size-custom-h6
+                                                                      text-base md:text-lg xl:text-[18px] 3xl:text-xl
                                                                       text-black text-opacity-65">
                                                                 Receive reports directly in Jira, Slack, ClickUp, GitHub, or your issue tracker.
                                                             </p>
