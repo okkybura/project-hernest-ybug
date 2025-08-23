@@ -8,6 +8,7 @@ module.exports = {
   //   "./src/**/*.{html,js,ts,jsx,tsx,mdx}",
   // ],
   theme: {
+    
     screens: {
       sm: '640px',
       md: '768px',
@@ -16,6 +17,12 @@ module.exports = {
       '2xl': '1536px',
       '3xl': '1700px',
       '4xl': '1900px'
+    },
+    fontSize: {
+      'sm': '.875rem',
+      'base': '1rem',
+      'lg': '1.25rem',
+      'xl': '1.5rem',
     },
     extend: {
       container: {

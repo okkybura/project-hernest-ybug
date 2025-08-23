@@ -137,43 +137,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Splitting Text - Button
 
-    document.querySelectorAll('.btn').forEach(btn => {
+    // document.querySelectorAll('.btn').forEach(btn => {
 
-        const textSpan = btn.querySelector('.text');
+    //     const textSpan = btn.querySelector('.text');
 
-        if (textSpan) {
-            const text = textSpan.textContent.trim();
-            let charSpans = '';
+    //     if (textSpan) {
+    //         const text = textSpan.textContent.trim();
+    //         let charSpans = '';
 
-            text.split('').forEach(char => {
-                charSpans += `<span>${char}</span>`;
-            });
+    //         text.split('').forEach(char => {
+    //             charSpans += `<span>${char}</span>`;
+    //         });
 
-            textSpan.innerHTML = `
-                        <span>${charSpans}</span>
-                        <span>${charSpans}</span>
-                    `;
-        }
-    });
+    //         textSpan.innerHTML = `
+    //                     <span>${charSpans}</span>
+    //                     <span>${charSpans}</span>
+    //                 `;
+    //     }
+    // });
 
     // Splitting Text - Link - Navbar
 
-    document.querySelectorAll('.link-default').forEach(link => {
+    // document.querySelectorAll('.link-default').forEach(link => {
 
-        const textSpan = link.querySelector('.text');
+    //     const textSpan = link.querySelector('.text');
 
-        if (textSpan) {
-            const text = textSpan.textContent.trim();
-            let charSpans = '';
+    //     if (textSpan) {
+    //         const text = textSpan.textContent.trim();
+    //         let charSpans = '';
 
-            text.split('').forEach(char => {
-                charSpans += `<span>${char}</span>`;
-            });
+    //         text.split('').forEach(char => {
+    //             charSpans += `<span>${char}</span>`;
+    //         });
 
-            textSpan.innerHTML = `
-                        <span>${charSpans}</span>
-                        <span>${charSpans}</span>
-                    `;
-        }
-    });
+    //         textSpan.innerHTML = `
+    //                     <span>${charSpans}</span>
+    //                     <span>${charSpans}</span>
+    //                 `;
+    //     }
+    // });
 });
